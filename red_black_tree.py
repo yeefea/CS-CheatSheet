@@ -19,12 +19,22 @@ BLACK = 1
 
 class RedBlackNode:
 
-    def __init__(self, element=0, color=RED, left=None, right=None, parent=None):
-        self.element = element
+    def __init__(self, value=0, color=RED):
+        self.value = value
         self.color = color
-        self.left = left
-        self.right = right
-        self.parent = parent
+        self.parent = None
+        self.left = None
+        self.right = None
+
+    def set_left_child(self, node):
+        self.left = node
+        if node is not None:
+            node.parent = self
+    
+    def set_right_child(self, node):
+        self.right = node
+        if node is not None:
+            node.parent = self
 
     @property
     def grandparent(self):
@@ -114,12 +124,6 @@ class RedBlackTree:
             node = node.right
         self._insert_case5(node)
 
-    def _delete_one_node(self, node):
-        """
-        """
-        pass
-        # todo
-
     def _insert_case5(self, node):
         node.parent.color = BLACK
         node.parent.color = RED
@@ -127,6 +131,65 @@ class RedBlackTree:
             self._rotate_right(node)
         else:
             self._rotate_left(node)
+
+    def _delete_child(self, node, v):
+        """
+
+        """
+        if node.value > v:
+            if node.left == None:
+                return False
+            return self._delete_child(node.left, v)
+        elif node.value < v:
+            if node.right is None:
+                return False
+            return self._delete_child(node.right, v)
+        elif node.value == v:
+            if node.right is None:
+                self._delete_one_child(node)
+                return True
+            smallest = self._get_smallest_child(node.right)
+            self._swap_node_value(node, smallest)
+            self._delete_one_child(smallest)
+            return True
+        else:
+            return False
+
+    def _delete_one_child(self, node):
+        """
+        """
+        if node.left == None:
+            child = node.right
+        else:
+            child = node.left
+        if node.parent is None and node.left is None and node.right is None:
+            node = None
+            self.root = node
+            return
+        if node.parent is None:
+            del node
+            child.parent = None
+            self.root = child
+            self.root.color = BLACK
+            return
+        
+        if node.parent.left == node:
+            node.parent.left = child
+        else:
+            node.parent.right = child
+        child.parent = node.parent
+        
+        if node.color == BLACK:
+            if child.color ==RED:
+                child.color = BLACK
+            else:
+                self.delete_case(child)
+        del node
+
+    def _swap_node_value(self, n1, n2):
+        tmp = n1.value
+        n1.value = n2.value
+        n2.value = tmp
 
     def _delete_case1(self, node):
         pass
@@ -199,9 +262,9 @@ class RedBlackTree:
         """
         similar to _rotate_left
         """
-        if node.parent is None:
-            self.root = node
-            return
+        # if node.parent is None:
+        #     self.root = node
+        #     return
         gp = node.grandparent
         ft = node.parent
         y = node.right
@@ -219,6 +282,13 @@ class RedBlackTree:
             else:
                 gp.right = node
 
+    def _get_smallest_child(self, node):
+        """
+        todo while loop
+        """
+        if node.left is None:
+            return node
+        return self._get_smallest_child(node.left)
     
 if __name__ == '__main__':
 
