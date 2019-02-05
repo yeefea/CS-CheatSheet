@@ -220,6 +220,7 @@ class RedBlackTree:
             self._rotate_left(node.parent)
         return True
 
+    # the following code is equivalent to _insert_case()
     #
     # def _insert_case2(self, node):
     #     """
@@ -310,7 +311,6 @@ class RedBlackTree:
             node.parent.set_left_child(child)
         else:
             node.parent.set_right_child(child)
-        # child.parent = node.parent
 
         if node.color == BLACK:
             if child.color == RED:
@@ -381,7 +381,7 @@ class RedBlackTree:
     def _rotate_left(self, node):
         """
         https://en.wikipedia.org/wiki/Tree_rotation
-        
+        用图形表示可以看到node向左移动
         before:
         gp
            \

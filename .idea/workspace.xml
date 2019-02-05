@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d513dd7a-7ca0-43ea-8b54-b34fb86b7f5a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/algorithm/is_prime.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/algorithm/largest_number.py" />
+    <list default="true" id="d513dd7a-7ca0-43ea-8b54-b34fb86b7f5a" name="Default" comment="update: algorithm, is_prime, largest_number">
       <change beforePath="" afterPath="$PROJECT_DIR$/skip_list.py" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/red_black_tree.py" afterPath="$PROJECT_DIR$/red_black_tree.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,85 +19,19 @@
       <file leaf-file-name="red_black_tree.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/red_black_tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="373" column="0" lean-forward="true" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#663#1" expanded="false" />
-                <element signature="e#709#2754#0" expanded="false" />
-                <element signature="e#755#878#0" expanded="false" />
-                <element signature="e#927#1057#0" expanded="false" />
-                <element signature="e#1107#1238#0" expanded="false" />
-                <element signature="e#1284#1360#0" expanded="false" />
-                <element signature="e#1407#1484#0" expanded="false" />
-                <element signature="e#1539#1686#0" expanded="false" />
-                <element signature="e#1539#1595#1" expanded="false" />
-                <element signature="e#1742#1825#0" expanded="false" />
-                <element signature="e#1876#1957#0" expanded="false" />
-                <element signature="e#2002#2282#0" expanded="false" />
-                <element signature="e#2329#2450#0" expanded="false" />
-                <element signature="e#2486#2581#0" expanded="false" />
-                <element signature="e#2615#2674#0" expanded="false" />
-                <element signature="e#2707#2754#0" expanded="false" />
-                <element signature="e#2845#2861#0" expanded="false" />
-                <element signature="e#2900#3135#0" expanded="false" />
-                <element signature="e#2934#3065#0" expanded="false" />
-                <element signature="e#3183#3888#0" expanded="false" />
-                <element signature="e#3214#3509#0" expanded="false" />
-                <element signature="e#3252#3435#0" expanded="false" />
-                <element signature="e#3551#3849#0" expanded="false" />
-                <element signature="e#3590#3774#0" expanded="false" />
-                <element signature="e#3927#4046#0" expanded="false" />
-                <element signature="e#4087#4207#0" expanded="false" />
-                <element signature="e#4256#4630#0" expanded="false" />
-                <element signature="e#4287#4390#0" expanded="false" />
-                <element signature="e#4432#4537#0" expanded="false" />
-                <element signature="e#4673#4796#0" expanded="false" />
-                <element signature="e#4839#4961#0" expanded="false" />
-                <element signature="e#5005#6334#0" expanded="false" />
-                <element signature="e#5005#5290#1" expanded="false" />
-                <element signature="e#5352#5394#0" expanded="false" />
-                <element signature="e#5562#5715#0" expanded="false" />
-                <element signature="e#5832#5884#0" expanded="false" />
-                <element signature="e#5985#6039#0" expanded="false" />
-                <element signature="e#6340#6341#0" expanded="false" />
-                <element signature="e#7665#8613#0" expanded="false" />
-                <element signature="e#7665#7769#1" expanded="false" />
-                <element signature="e#7834#7957#0" expanded="false" />
-                <element signature="e#8024#8149#0" expanded="false" />
-                <element signature="e#8192#8575#0" expanded="false" />
-                <element signature="e#8240#8315#0" expanded="false" />
-                <element signature="e#8662#9586#0" expanded="false" />
-                <element signature="e#8662#8744#1" expanded="false" />
-                <element signature="e#8965#9024#0" expanded="false" />
-                <element signature="e#9094#9219#0" expanded="false" />
-                <element signature="e#9453#9569#0" expanded="false" />
-                <element signature="e#9629#11825#0" expanded="false" />
-                <element signature="e#9629#9683#1" expanded="false" />
-                <element signature="e#9745#9795#0" expanded="false" />
-                <element signature="e#9879#10152#0" expanded="false" />
-                <element signature="e#10413#10495#0" expanded="false" />
-                <element signature="e#10672#10772#0" expanded="false" />
-                <element signature="e#10800#11825#0" expanded="false" />
-                <element signature="e#10848#11825#0" expanded="false" />
-                <element signature="e#11002#11136#0" expanded="false" />
-                <element signature="e#11310#11445#0" expanded="false" />
-                <element signature="e#11614#11698#0" expanded="false" />
-                <element signature="e#11741#11825#0" expanded="false" />
-                <element signature="e#11891#11956#0" expanded="false" />
-                <element signature="e#12000#12909#0" expanded="false" />
-                <element signature="e#12000#12339#1" expanded="false" />
-                <element signature="e#12384#12419#0" expanded="false" />
-                <element signature="e#12811#12909#0" expanded="false" />
-                <element signature="e#12954#13441#0" expanded="false" />
-                <element signature="e#12954#13001#1" expanded="false" />
-                <element signature="e#13046#13081#0" expanded="false" />
-                <element signature="e#13343#13441#0" expanded="false" />
-                <element signature="e#13508#13581#0" expanded="false" />
-                <element signature="e#13647#13722#0" expanded="false" />
-                <element signature="e#13755#13802#0" expanded="false" />
-                <element signature="e#13836#14245#0" expanded="false" />
-                <element signature="e#14058#14155#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="254">
+              <caret line="383" column="25" lean-forward="false" selection-start-line="383" selection-start-column="25" selection-end-line="383" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,21 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="largest_number.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="largest_number.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithm/largest_number.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.IdeaIC2017.3/system/python_stubs/138991001/builtins.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="5183" column="8" lean-forward="false" selection-start-line="5183" selection-start-column="8" selection-end-line="5183" selection-end-column="8" />
+            <state relative-caret-position="88">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -148,8 +72,8 @@
       <file leaf-file-name="skip_list.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skip_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="88">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -181,6 +105,7 @@
       <find>= RedBlackNode(</find>
       <find>is not None</find>
       <find>= None</find>
+      <find>vscod</find>
     </findStrings>
     <replaceStrings>
       <replace>_nil</replace>
@@ -202,11 +127,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/util/printing.py" />
-        <option value="$PROJECT_DIR$/skip_list.py" />
-        <option value="$PROJECT_DIR$/red_black_tree.py" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/algorithm/is_prime.py" />
         <option value="$PROJECT_DIR$/algorithm/largest_number.py" />
+        <option value="$PROJECT_DIR$/skip_list.py" />
+        <option value="$PROJECT_DIR$/red_black_tree.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -273,7 +199,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.largest_number">
+  <component name="RunManager" selected="Python.skip_list">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -369,6 +295,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="skip_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AUD_Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/skip_list.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -409,16 +353,18 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.red_black_tree" />
       <item index="1" class="java.lang.String" itemvalue="Python.is_prime" />
       <item index="2" class="java.lang.String" itemvalue="Python.largest_number" />
+      <item index="3" class="java.lang.String" itemvalue="Python.skip_list" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.largest_number" />
-        <item index="1" class="java.lang.String" itemvalue="Python.is_prime" />
-        <item index="2" class="java.lang.String" itemvalue="Python.red_black_tree" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.skip_list" />
+        <item index="1" class="java.lang.String" itemvalue="Python.largest_number" />
+        <item index="2" class="java.lang.String" itemvalue="Python.is_prime" />
+        <item index="3" class="java.lang.String" itemvalue="Python.red_black_tree" />
       </list>
     </recent_temporary>
   </component>
@@ -450,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549372545282</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update: algorithm, is_prime, largest_number">
+      <created>1549374492864</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1549374492864</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -466,11 +419,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42778993" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15351813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -491,7 +444,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update: rbtree insertion" />
     <MESSAGE value="update: add readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: add readme" />
+    <MESSAGE value="update: algorithm, is_prime, largest_number" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: algorithm, is_prime, largest_number" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -504,83 +458,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#663#1" expanded="false" />
-            <element signature="e#709#2754#0" expanded="false" />
-            <element signature="e#755#878#0" expanded="false" />
-            <element signature="e#927#1057#0" expanded="false" />
-            <element signature="e#1107#1238#0" expanded="false" />
-            <element signature="e#1284#1360#0" expanded="false" />
-            <element signature="e#1407#1484#0" expanded="false" />
-            <element signature="e#1539#1686#0" expanded="false" />
-            <element signature="e#1539#1595#1" expanded="false" />
-            <element signature="e#1742#1825#0" expanded="false" />
-            <element signature="e#1876#1957#0" expanded="false" />
-            <element signature="e#2002#2282#0" expanded="false" />
-            <element signature="e#2329#2450#0" expanded="false" />
-            <element signature="e#2486#2581#0" expanded="false" />
-            <element signature="e#2615#2674#0" expanded="false" />
-            <element signature="e#2707#2754#0" expanded="false" />
-            <element signature="e#2845#2861#0" expanded="false" />
-            <element signature="e#2900#3135#0" expanded="false" />
-            <element signature="e#2934#3065#0" expanded="false" />
-            <element signature="e#3183#3888#0" expanded="false" />
-            <element signature="e#3214#3509#0" expanded="false" />
-            <element signature="e#3252#3435#0" expanded="false" />
-            <element signature="e#3551#3849#0" expanded="false" />
-            <element signature="e#3590#3774#0" expanded="false" />
-            <element signature="e#3927#4046#0" expanded="false" />
-            <element signature="e#4087#4207#0" expanded="false" />
-            <element signature="e#4256#4630#0" expanded="false" />
-            <element signature="e#4287#4390#0" expanded="false" />
-            <element signature="e#4432#4537#0" expanded="false" />
-            <element signature="e#4673#4796#0" expanded="false" />
-            <element signature="e#4839#4961#0" expanded="false" />
-            <element signature="e#5005#6334#0" expanded="false" />
-            <element signature="e#5005#5290#1" expanded="false" />
-            <element signature="e#5352#5394#0" expanded="false" />
-            <element signature="e#5562#5715#0" expanded="false" />
-            <element signature="e#5832#5884#0" expanded="false" />
-            <element signature="e#5985#6039#0" expanded="false" />
-            <element signature="e#6340#6341#0" expanded="false" />
-            <element signature="e#7665#8613#0" expanded="false" />
-            <element signature="e#7665#7769#1" expanded="false" />
-            <element signature="e#7834#7957#0" expanded="false" />
-            <element signature="e#8024#8149#0" expanded="false" />
-            <element signature="e#8192#8575#0" expanded="false" />
-            <element signature="e#8240#8315#0" expanded="false" />
-            <element signature="e#8662#9586#0" expanded="false" />
-            <element signature="e#8662#8744#1" expanded="false" />
-            <element signature="e#8965#9024#0" expanded="false" />
-            <element signature="e#9094#9219#0" expanded="false" />
-            <element signature="e#9453#9569#0" expanded="false" />
-            <element signature="e#9629#11825#0" expanded="false" />
-            <element signature="e#9629#9683#1" expanded="false" />
-            <element signature="e#9745#9795#0" expanded="false" />
-            <element signature="e#9879#10152#0" expanded="false" />
-            <element signature="e#10413#10495#0" expanded="false" />
-            <element signature="e#10672#10772#0" expanded="false" />
-            <element signature="e#10800#11825#0" expanded="false" />
-            <element signature="e#10848#11825#0" expanded="false" />
-            <element signature="e#11002#11136#0" expanded="false" />
-            <element signature="e#11310#11445#0" expanded="false" />
-            <element signature="e#11614#11698#0" expanded="false" />
-            <element signature="e#11741#11825#0" expanded="false" />
-            <element signature="e#11891#11956#0" expanded="false" />
-            <element signature="e#12000#12909#0" expanded="false" />
-            <element signature="e#12000#12339#1" expanded="false" />
-            <element signature="e#12384#12419#0" expanded="false" />
-            <element signature="e#12811#12909#0" expanded="false" />
-            <element signature="e#12954#13441#0" expanded="false" />
-            <element signature="e#12954#13001#1" expanded="false" />
-            <element signature="e#13046#13081#0" expanded="false" />
-            <element signature="e#13343#13441#0" expanded="false" />
-            <element signature="e#13508#13581#0" expanded="false" />
-            <element signature="e#13647#13722#0" expanded="false" />
-            <element signature="e#13755#13802#0" expanded="false" />
-            <element signature="e#13836#14245#0" expanded="false" />
-            <element signature="e#14058#14155#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -616,98 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skip_list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/red_black_tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="373" column="0" lean-forward="true" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#663#1" expanded="false" />
-            <element signature="e#709#2754#0" expanded="false" />
-            <element signature="e#755#878#0" expanded="false" />
-            <element signature="e#927#1057#0" expanded="false" />
-            <element signature="e#1107#1238#0" expanded="false" />
-            <element signature="e#1284#1360#0" expanded="false" />
-            <element signature="e#1407#1484#0" expanded="false" />
-            <element signature="e#1539#1686#0" expanded="false" />
-            <element signature="e#1539#1595#1" expanded="false" />
-            <element signature="e#1742#1825#0" expanded="false" />
-            <element signature="e#1876#1957#0" expanded="false" />
-            <element signature="e#2002#2282#0" expanded="false" />
-            <element signature="e#2329#2450#0" expanded="false" />
-            <element signature="e#2486#2581#0" expanded="false" />
-            <element signature="e#2615#2674#0" expanded="false" />
-            <element signature="e#2707#2754#0" expanded="false" />
-            <element signature="e#2845#2861#0" expanded="false" />
-            <element signature="e#2900#3135#0" expanded="false" />
-            <element signature="e#2934#3065#0" expanded="false" />
-            <element signature="e#3183#3888#0" expanded="false" />
-            <element signature="e#3214#3509#0" expanded="false" />
-            <element signature="e#3252#3435#0" expanded="false" />
-            <element signature="e#3551#3849#0" expanded="false" />
-            <element signature="e#3590#3774#0" expanded="false" />
-            <element signature="e#3927#4046#0" expanded="false" />
-            <element signature="e#4087#4207#0" expanded="false" />
-            <element signature="e#4256#4630#0" expanded="false" />
-            <element signature="e#4287#4390#0" expanded="false" />
-            <element signature="e#4432#4537#0" expanded="false" />
-            <element signature="e#4673#4796#0" expanded="false" />
-            <element signature="e#4839#4961#0" expanded="false" />
-            <element signature="e#5005#6334#0" expanded="false" />
-            <element signature="e#5005#5290#1" expanded="false" />
-            <element signature="e#5352#5394#0" expanded="false" />
-            <element signature="e#5562#5715#0" expanded="false" />
-            <element signature="e#5832#5884#0" expanded="false" />
-            <element signature="e#5985#6039#0" expanded="false" />
-            <element signature="e#6340#6341#0" expanded="false" />
-            <element signature="e#7665#8613#0" expanded="false" />
-            <element signature="e#7665#7769#1" expanded="false" />
-            <element signature="e#7834#7957#0" expanded="false" />
-            <element signature="e#8024#8149#0" expanded="false" />
-            <element signature="e#8192#8575#0" expanded="false" />
-            <element signature="e#8240#8315#0" expanded="false" />
-            <element signature="e#8662#9586#0" expanded="false" />
-            <element signature="e#8662#8744#1" expanded="false" />
-            <element signature="e#8965#9024#0" expanded="false" />
-            <element signature="e#9094#9219#0" expanded="false" />
-            <element signature="e#9453#9569#0" expanded="false" />
-            <element signature="e#9629#11825#0" expanded="false" />
-            <element signature="e#9629#9683#1" expanded="false" />
-            <element signature="e#9745#9795#0" expanded="false" />
-            <element signature="e#9879#10152#0" expanded="false" />
-            <element signature="e#10413#10495#0" expanded="false" />
-            <element signature="e#10672#10772#0" expanded="false" />
-            <element signature="e#10800#11825#0" expanded="false" />
-            <element signature="e#10848#11825#0" expanded="false" />
-            <element signature="e#11002#11136#0" expanded="false" />
-            <element signature="e#11310#11445#0" expanded="false" />
-            <element signature="e#11614#11698#0" expanded="false" />
-            <element signature="e#11741#11825#0" expanded="false" />
-            <element signature="e#11891#11956#0" expanded="false" />
-            <element signature="e#12000#12909#0" expanded="false" />
-            <element signature="e#12000#12339#1" expanded="false" />
-            <element signature="e#12384#12419#0" expanded="false" />
-            <element signature="e#12811#12909#0" expanded="false" />
-            <element signature="e#12954#13441#0" expanded="false" />
-            <element signature="e#12954#13001#1" expanded="false" />
-            <element signature="e#13046#13081#0" expanded="false" />
-            <element signature="e#13343#13441#0" expanded="false" />
-            <element signature="e#13508#13581#0" expanded="false" />
-            <element signature="e#13647#13722#0" expanded="false" />
-            <element signature="e#13755#13802#0" expanded="false" />
-            <element signature="e#13836#14245#0" expanded="false" />
-            <element signature="e#14058#14155#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -727,9 +513,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skip_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/.IdeaIC2017.3/system/python_stubs/138991001/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
+        <state relative-caret-position="4945">
           <caret line="5183" column="8" lean-forward="false" selection-start-line="5183" selection-start-column="8" selection-end-line="5183" selection-end-column="8" />
           <folding />
         </state>
@@ -737,8 +531,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithm/largest_number.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        <state relative-caret-position="88">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red_black_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="383" column="25" lean-forward="false" selection-start-line="383" selection-start-column="25" selection-end-line="383" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding />
         </state>
       </provider>
