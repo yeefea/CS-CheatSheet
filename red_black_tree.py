@@ -19,22 +19,51 @@ BLACK = 1
 
 class RedBlackNode:
 
-    def __init__(self, value=0, color=RED):
+    def __init__(self, value, color=RED):
         self.value = value
         self.color = color
         self.parent = None
         self.left = None
         self.right = None
 
+    def is_left_child_of_parent(self):
+        if self.parent is None:
+            return False
+        if self.parent.left == self:
+            return True
+        return False
+
+    def is_right_child_of_parent(self):
+        if self.parent is None:
+            return False
+        if self.parent.right == self:
+            return True
+        return False
+
     def set_left_child(self, node):
         self.left = node
         if node is not None:
             node.parent = self
-    
+
     def set_right_child(self, node):
         self.right = node
         if node is not None:
             node.parent = self
+
+    def set_parent_left_child(self, parent):
+        """
+
+        :param parent:
+        :return:
+        """
+        self.parent = parent
+        if parent is not None:
+            parent.left = self
+
+    def set_parent_right_child(self, parent):
+        self.parent = parent
+        if parent is not None:
+            parent.right = self
 
     @property
     def grandparent(self):
@@ -44,26 +73,34 @@ class RedBlackNode:
 
     @property
     def uncle(self):
+        if self.parent is None:
+            return None
         grandparent = self.grandparent
         if grandparent is None:
             return None
-        if self.parent == grandparent.right:
+        if self.parent.is_right_child_of_parent():
             return grandparent.left
         else:
             return grandparent.right
 
     @property
     def sibling(self):
-        if self.parent.left == self:
+        if self.is_left_child_of_parent():
             return self.parent.right
         else:
             return self.parent.left
-    
+
     def flip_color(self):
         if self.color == RED:
             self.color = BLACK
         else:
             self.color = RED
+
+    def __repr__(self):
+        return 'RedBlackNode({},{})'.format(self.value, self.color)
+
+    def __str__(self):
+        return '<{},{}>'.format(self.value, self.color)
 
 
 class RedBlackTree:
@@ -72,13 +109,47 @@ class RedBlackTree:
         self.root = None
 
     def insert(self, value):
-        pass
-    
+        if self.root is None:
+            self.root = RedBlackNode(value, BLACK)
+            return True
+        else:
+            return self._insert_value(self.root, value)
+
+    def _insert_value(self, node, v):
+        if v < node.value:
+            if node.left is None:
+                child = RedBlackNode(v)
+                node.set_left_child(child)
+                return self._insert_case1(child)
+            else:
+                return self._insert_value(node.left, v)
+        elif v > node.value:
+            if node.right is None:
+                child = RedBlackNode(v)
+                node.set_right_child(child)
+                return self._insert_case1(child)
+            else:
+                return self._insert_value(node.right, v)
+        else:
+            return False
+
     def delete(self, value):
         pass
-    
+
     def contains(self, value):
         pass
+
+    @property
+    def min(self):
+        if self.root is None:
+            return None
+        return self._get_smallest_child(self.root).value
+
+    @property
+    def max(self):
+        if self.root is None:
+            return None
+        return self._get_largest_child(self.root).value
 
     def _insert_case1(self, node):
         """
@@ -87,10 +158,11 @@ class RedBlackTree:
         因为它在每个路径上对黑节点数目增加一，性质5匹配。
         """
         if node.parent is None:
-            n.color = BLACK
+            node.color = BLACK
+            return True
         else:
-            self._insert_case2(node)
-    
+            return self._insert_case2(node)
+
     def _insert_case2(self, node):
         """
         情形2
@@ -99,112 +171,172 @@ class RedBlackTree:
         但由于新节点N是红色，通过它的每个子节点的路径就都有同通过它所取代的黑色的叶子的路径同样数目的黑色节点，所以依然满足这个性质。
         """
         if node.parent.color == BLACK:
-            return
-        self._insert_case3(node)
+            return True
+        return self._insert_case3(node)
 
     def _insert_case3(self, node):
-        """
-
-        """
         uncle = node.uncle
         if uncle is not None and uncle.color == RED:
-            node.parent.color=BLACK
+            node.parent.color = BLACK
             uncle.color = BLACK
             node.grandparent.color = RED
-            self._insert_case1(node.grandparent)
+            return self._insert_case1(node.grandparent)
         else:
-            self._insert_case4(node)
-    
+            return self._insert_case4(node)
+
     def _insert_case4(self, node):
-        if node == node.parent.right and node.parent == node.grandparent.left:
-            self._rotate_left(node.parent)
+        if node.is_right_child_of_parent() and node.parent.is_left_child_of_parent():
+            self._rotate_left(node)
             node = node.left
-        elif node == node.parent.left and node.parent == node.grandparent.right:
-            self._rotate_right(node.parent)
+        elif node.is_left_child_of_parent() and node.parent.is_right_child_of_parent():
+            self._rotate_right(node)
             node = node.right
-        self._insert_case5(node)
+        return self._insert_case5(node)
 
     def _insert_case5(self, node):
         node.parent.color = BLACK
-        node.parent.color = RED
-        if node == node.parent.left and node.parent == node.grandparent.left:
-            self._rotate_right(node)
+        node.grandparent.color = RED
+        if node.is_left_child_of_parent() and node.parent.is_left_child_of_parent():
+            self._rotate_right(node.parent)
         else:
-            self._rotate_left(node)
+            self._rotate_left(node.parent)
+        return True
 
     def _delete_child(self, node, v):
         """
-
+        从node和node的子节点中删除v
+        :param node:
+        :param v: value
+        :return:
         """
-        if node.value > v:
-            if node.left == None:
-                return False
+        if node.value > v:  # node值 > v 要删除的节点在左子树里
+            if node.left is None:
+                return False  # 没找到要删除的节点，返回False
             return self._delete_child(node.left, v)
-        elif node.value < v:
+        elif node.value < v:  # node值 < v 要删除的节点在右子树里
             if node.right is None:
-                return False
+                return False  # 没找到要删除的节点，返回False
             return self._delete_child(node.right, v)
         elif node.value == v:
-            if node.right is None:
-                self._delete_one_child(node)
+            if node.right is None:  # 右子树为空
+                self._delete_one_child(node)  # 直接执行删除node节点的逻辑
                 return True
-            smallest = self._get_smallest_child(node.right)
-            self._swap_node_value(node, smallest)
+            smallest = self._get_smallest_child(node.right)  # 查找右子树的最小节点
+            self._swap_node_value(node, smallest)  # 交换node和smallest的值
+            # 现在node的值在smallest里，删除smallest节点
             self._delete_one_child(smallest)
             return True
-        else:
-            return False
+        # 这里是没用的
+        return False
 
     def _delete_one_child(self, node):
         """
+        前提条件: node最多只有一个子节点！
+        :param node:
+        :return:
         """
-        if node.left == None:
+        if node.left is None:
             child = node.right
         else:
             child = node.left
-        if node.parent is None and node.left is None and node.right is None:
+        if node.parent is None and node.left is None and node.right is None:  # node是树中唯一的节点，删除根节点，树为空
             node = None
             self.root = node
             return
-        if node.parent is None:
+
+        if node.parent is None:  # node为根节点，删除后子节点变成根节点
             del node
             child.parent = None
             self.root = child
             self.root.color = BLACK
             return
-        
-        if node.parent.left == node:
-            node.parent.left = child
+
+        if node.is_left_child_of_parent():
+            node.parent.set_left_child(child)
         else:
-            node.parent.right = child
-        child.parent = node.parent
-        
+            node.parent.set_right_child(child)
+        # child.parent = node.parent
+
         if node.color == BLACK:
-            if child.color ==RED:
+            if child.color == RED:
                 child.color = BLACK
             else:
                 self.delete_case(child)
         del node
 
-    def _swap_node_value(self, n1, n2):
+    def delete_case(self, node):
+        """
+
+        :param node:
+        :return:
+        """
+        if node.parent is None:  # node 是 root节点
+            node.color = BLACK  # node转黑，完成
+            return
+
+        # 此时node有父节点
+        if node.sibling.color == RED:  # 兄弟节点是红的
+            node.parent.color = RED  # 父节点转红
+            node.sibling.color = BLACK  # 兄弟转黑
+            if node.is_left_child_of_parent():  # 当前节点是左节点
+                self._rotate_left(node.sibling)  # 兄弟节点左旋
+            else:
+                self._rotate_right(node.sibling)  # 兄弟节点右旋
+
+        # 此时node的兄弟节点是黑的
+        if node.parent.color == BLACK and \
+                node.sibling.color == BLACK and \
+                node.sibling.left.color == BLACK and \
+                node.sibling.right.color == BLACK:  # 父节点、兄弟节点、兄弟的儿子都是黑的
+            node.sibling.color = RED  # 兄弟转红
+            self.delete_case(node.parent)  # 递归处理
+        elif node.parent.color == RED and node.sibling.color == BLACK and \
+                node.sibling.left.color == BLACK and node.sibling.right.color == BLACK:
+            # 父节点是红的
+            node.sibling.color = RED  # 兄弟转红
+            node.parent.color = BLACK  # 父节点转黑
+        else:
+
+            if node.sibling.color == BLACK:
+                if node.is_left_child_of_parent() and node.sibling.left.color == RED and \
+                        node.sibling.right.color == BLACK:
+                    node.sibling.color = RED
+                    node.sibling.left.color = BLACK
+                    self._rotate_right(node.sibling.left)
+                elif node.is_right_child_of_parent() and node.sibling.left.color == BLACK and \
+                        node.sibling.right.color == RED:
+                    node.sibling.color = RED
+                    node.sibling.right.color = BLACK
+                    self._rotate_left(node.sibling.right)
+                node.sibling.color = node.parent.color
+                node.parent.color = BLACK
+                if node.is_left_child_of_parent():
+                    node.sibling.right.color = BLACK
+                    self._rotate_left(node.sibling)
+                else:
+                    node.sibling.left.color = BLACK
+                    self._rotate_right(node.sibling)
+
+    @classmethod
+    def _swap_node_value(cls, n1, n2):
         tmp = n1.value
         n1.value = n2.value
         n2.value = tmp
 
     def _delete_case1(self, node):
         pass
-    
+
     def _delete_case2(self, node):
         pass
-    
+
     def _delete_case3(self, node):
-        pass    
+        pass
 
     def _delete_case4(self, node):
-        pass   
+        pass
 
     def _delete_case5(self, node):
-        pass    
+        pass
 
     def _delete_case6(self, node):
         pass
@@ -238,18 +370,15 @@ class RedBlackTree:
         y = node.left
 
         # right child of ft <- y
-        ft.right = y
-        if y is not None:
-            y.parent = ft
-        
+        ft.set_right_child(y)
+
         # left child of node <- ft
-        node.left = ft
-        ft.parent = node
-        
+        node.set_left_child(ft)
+
         # check root node
         if self.root == ft:
             self.root = node
-        
+
         # check grandparent node
         node.parent = gp
         if gp is not None:
@@ -262,17 +391,14 @@ class RedBlackTree:
         """
         similar to _rotate_left
         """
-        # if node.parent is None:
-        #     self.root = node
-        #     return
+        if node.parent is None:
+            self.root = node
+            return
         gp = node.grandparent
         ft = node.parent
         y = node.right
-        ft.left = y
-        if y is not None:
-            y.parent = ft
-        node.right = ft
-        ft.parent = node
+        ft.set_left_child(y)
+        node.set_right_child(ft)
         if self.root == ft:
             self.root = node
         node.parent = gp
@@ -282,16 +408,26 @@ class RedBlackTree:
             else:
                 gp.right = node
 
-    def _get_smallest_child(self, node):
-        """
-        todo while loop
-        """
-        if node.left is None:
-            return node
-        return self._get_smallest_child(node.left)
-    
+    @classmethod
+    def _get_smallest_child(cls, node):
+        while node.left is not None:
+            node = node.left
+        return node
+
+    @classmethod
+    def _get_largest_child(cls, node):
+        while node.right is not None:
+            node = node.right
+        return node
+
+
 if __name__ == '__main__':
+    from util.printing import convert_red_black_node_to_str
+    import random
 
-    n=RedBlackNode('test')
-    print(n.color)
+    rbtree = RedBlackTree()
+    for _ in range(100):
+        n = random.randint(1, 1000)
+        rbtree.insert(n)
 
+    print(convert_red_black_node_to_str(rbtree.root))
