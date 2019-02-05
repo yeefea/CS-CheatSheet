@@ -103,6 +103,9 @@ class RedBlackNode:
         return '<{},{}>'.format(self.value, self.color)
 
 
+_nil = RedBlackNode(None, BLACK)
+
+
 class RedBlackTree:
 
     def __init__(self):
@@ -111,89 +114,104 @@ class RedBlackTree:
     def insert(self, value):
         if self.root is None:
             self.root = RedBlackNode(value, BLACK)
+            self.root.left = _nil
+            self.root.right = _nil
             return True
         else:
             return self._insert_value(self.root, value)
 
     def _insert_value(self, node, v):
         if v < node.value:
-            if node.left is None:
+            if node.left == _nil:
                 child = RedBlackNode(v)
+                child.left = _nil
+                child.right = _nil
                 node.set_left_child(child)
-                return self._insert_case1(child)
+                return self._insert_case(child)
             else:
                 return self._insert_value(node.left, v)
         elif v > node.value:
-            if node.right is None:
+            if node.right == _nil:
                 child = RedBlackNode(v)
+                child.left = _nil
+                child.right = _nil
                 node.set_right_child(child)
-                return self._insert_case1(child)
+                return self._insert_case(child)
             else:
                 return self._insert_value(node.right, v)
         else:
             return False
 
     def delete(self, value):
-        pass
+        if self.root is None or self.root == _nil:
+            return False
+        return self._delete_child(self.root, value)
 
     def contains(self, value):
-        pass
+        if self.root is None or self.root == _nil:
+            return False
+        return self._contain_value(self.root, value)
+
+    def _contain_value(self, node, v):
+        if v < node.value:
+            if node.left == _nil:
+                return False
+            return self._contain_value(node.left, v)
+        elif v > node.value:
+            if node.right == _nil:
+                return False
+            return self._contain_value(node.right, v)
+        elif v == node.value:
+            return True
+        else:
+            return False
 
     @property
     def min(self):
-        if self.root is None:
+        if self.root is None or self.root == _nil:
             return None
         return self._get_smallest_child(self.root).value
 
     @property
     def max(self):
-        if self.root is None:
+        if self.root is None or self.root == _nil:
             return None
         return self._get_largest_child(self.root).value
 
-    def _insert_case1(self, node):
+    def _insert_case(self, node):
         """
         情形1:
         新节点N位于树的根上，没有父节点。在这种情形下，我们把它重绘为黑色以满足性质2。
         因为它在每个路径上对黑节点数目增加一，性质5匹配。
-        """
-        if node.parent is None:
-            node.color = BLACK
-            return True
-        else:
-            return self._insert_case2(node)
-
-    def _insert_case2(self, node):
-        """
         情形2
         新节点的父节点P是黑色，所以性质4没有失效（新节点是红色的）。
         在这种情形下，树仍是有效的。性质5也未受到威胁，尽管新节点N有两个黑色叶子子节点；
         但由于新节点N是红色，通过它的每个子节点的路径就都有同通过它所取代的黑色的叶子的路径同样数目的黑色节点，所以依然满足这个性质。
         """
+        # case 1
+        if node.parent is None:
+            node.color = BLACK
+            return True
+        # case 2
         if node.parent.color == BLACK:
             return True
-        return self._insert_case3(node)
-
-    def _insert_case3(self, node):
+        # case 3
         uncle = node.uncle
-        if uncle is not None and uncle.color == RED:
+        if uncle.color == RED:
             node.parent.color = BLACK
             uncle.color = BLACK
             node.grandparent.color = RED
-            return self._insert_case1(node.grandparent)
-        else:
-            return self._insert_case4(node)
+            return self._insert_case(node.grandparent)
 
-    def _insert_case4(self, node):
+        # case 4
         if node.is_right_child_of_parent() and node.parent.is_left_child_of_parent():
             self._rotate_left(node)
             node = node.left
         elif node.is_left_child_of_parent() and node.parent.is_right_child_of_parent():
             self._rotate_right(node)
             node = node.right
-        return self._insert_case5(node)
 
-    def _insert_case5(self, node):
+        # case 5
         node.parent.color = BLACK
         node.grandparent.color = RED
         if node.is_left_child_of_parent() and node.parent.is_left_child_of_parent():
@@ -201,6 +219,43 @@ class RedBlackTree:
         else:
             self._rotate_left(node.parent)
         return True
+
+    #
+    # def _insert_case2(self, node):
+    #     """
+    #
+    #     """
+    #     if node.parent.color == BLACK:
+    #         return True
+    #     return self._insert_case3(node)
+    #
+    # def _insert_case3(self, node):
+    #     uncle = node.uncle
+    #     if uncle != _nil and uncle.color == RED:
+    #         node.parent.color = BLACK
+    #         uncle.color = BLACK
+    #         node.grandparent.color = RED
+    #         return self._insert_case(node.grandparent)
+    #     else:
+    #         return self._insert_case4(node)
+    #
+    # def _insert_case4(self, node):
+    #     if node.is_right_child_of_parent() and node.parent.is_left_child_of_parent():
+    #         self._rotate_left(node)
+    #         node = node.left
+    #     elif node.is_left_child_of_parent() and node.parent.is_right_child_of_parent():
+    #         self._rotate_right(node)
+    #         node = node.right
+    #     return self._insert_case5(node)
+    #
+    # def _insert_case5(self, node):
+    #     node.parent.color = BLACK
+    #     node.grandparent.color = RED
+    #     if node.is_left_child_of_parent() and node.parent.is_left_child_of_parent():
+    #         self._rotate_right(node.parent)
+    #     else:
+    #         self._rotate_left(node.parent)
+    #     return True
 
     def _delete_child(self, node, v):
         """
@@ -210,15 +265,15 @@ class RedBlackTree:
         :return:
         """
         if node.value > v:  # node值 > v 要删除的节点在左子树里
-            if node.left is None:
+            if node.left == _nil:
                 return False  # 没找到要删除的节点，返回False
             return self._delete_child(node.left, v)
         elif node.value < v:  # node值 < v 要删除的节点在右子树里
-            if node.right is None:
+            if node.right == _nil:
                 return False  # 没找到要删除的节点，返回False
             return self._delete_child(node.right, v)
         elif node.value == v:
-            if node.right is None:  # 右子树为空
+            if node.right == _nil:  # 右子树为空
                 self._delete_one_child(node)  # 直接执行删除node节点的逻辑
                 return True
             smallest = self._get_smallest_child(node.right)  # 查找右子树的最小节点
@@ -323,24 +378,6 @@ class RedBlackTree:
         n1.value = n2.value
         n2.value = tmp
 
-    def _delete_case1(self, node):
-        pass
-
-    def _delete_case2(self, node):
-        pass
-
-    def _delete_case3(self, node):
-        pass
-
-    def _delete_case4(self, node):
-        pass
-
-    def _delete_case5(self, node):
-        pass
-
-    def _delete_case6(self, node):
-        pass
-
     def _rotate_left(self, node):
         """
         https://en.wikipedia.org/wiki/Tree_rotation
@@ -410,24 +447,35 @@ class RedBlackTree:
 
     @classmethod
     def _get_smallest_child(cls, node):
-        while node.left is not None:
+        while node.left != _nil:
             node = node.left
         return node
 
     @classmethod
     def _get_largest_child(cls, node):
-        while node.right is not None:
+        while node.right != _nil:
             node = node.right
         return node
+
+    def __str__(self):
+        return convert_red_black_node_to_str(self.root)
 
 
 if __name__ == '__main__':
     from util.printing import convert_red_black_node_to_str
-    import random
 
     rbtree = RedBlackTree()
-    for _ in range(100):
-        n = random.randint(1, 1000)
+    for n in range(10):
         rbtree.insert(n)
 
     print(convert_red_black_node_to_str(rbtree.root))
+
+    for n in range(10):
+        print(rbtree.delete(n))
+        print(rbtree)
+        print(rbtree.min)
+        print(rbtree.max)
+    print(rbtree.delete(1))
+    print(rbtree)
+    print(rbtree.min)
+    print(rbtree.max)

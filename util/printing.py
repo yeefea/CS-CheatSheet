@@ -12,14 +12,9 @@ def _output_red_black_node(indent, node, buffer):
     buffer.append('\n')
     if node.left is not None:
         _output_red_black_node(indent + 1, node.left, buffer)
-    else:
-        _output_indent_str(indent + 1, buffer)
-        buffer.append('<NIL,1>\n')
+
     if node.right is not None:
         _output_red_black_node(indent + 1, node.right, buffer)
-    else:
-        _output_indent_str(indent + 1, buffer)
-        buffer.append('<NIL,1>\n')
 
 
 def _output_indent_str(indent, buffer):
