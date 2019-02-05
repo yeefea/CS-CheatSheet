@@ -13,6 +13,8 @@ https://zh.wikipedia.org/wiki/%E7%BA%A2%E9%BB%91%E6%A0%91
 4. 每个红色节点必须有两个黑色的子节点。（从每个叶子到根的所有路径上不能有两个连续的红色节点。）
 5. 从任一节点到其每个叶子的所有简单路径都包含相同数目的黑色节点。
 """
+from util.printing import convert_red_black_node_to_str
+
 RED = 0
 BLACK = 1
 
@@ -462,13 +464,12 @@ class RedBlackTree:
 
 
 if __name__ == '__main__':
-    from util.printing import convert_red_black_node_to_str
 
     rbtree = RedBlackTree()
     for n in range(10):
         rbtree.insert(n)
 
-    print(convert_red_black_node_to_str(rbtree.root))
+    print(rbtree)
 
     for n in range(10):
         print(rbtree.delete(n))
