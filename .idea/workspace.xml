@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d513dd7a-7ca0-43ea-8b54-b34fb86b7f5a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/red_black_tree.py" afterPath="$PROJECT_DIR$/red_black_tree.py" />
-      <change beforePath="$PROJECT_DIR$/util/printing.py" afterPath="$PROJECT_DIR$/util/printing.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/readme.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skip_list.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,12 +14,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="red_black_tree.py" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="red_black_tree.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/red_black_tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="478" column="16" lean-forward="false" selection-start-line="478" selection-start-column="16" selection-end-line="478" selection-end-column="16" />
+            <state relative-caret-position="440">
+              <caret line="373" column="0" lean-forward="true" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
               <folding>
                 <element signature="e#0#663#1" expanded="false" />
                 <element signature="e#709#2754#0" expanded="false" />
@@ -92,26 +93,32 @@
                 <element signature="e#13343#13441#0" expanded="false" />
                 <element signature="e#13508#13581#0" expanded="false" />
                 <element signature="e#13647#13722#0" expanded="false" />
+                <element signature="e#13755#13802#0" expanded="false" />
+                <element signature="e#13836#14245#0" expanded="false" />
+                <element signature="e#14058#14155#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="random.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda3/Lib/random.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="747" column="19" lean-forward="false" selection-start-line="747" selection-start-column="19" selection-end-line="747" selection-end-column="19" />
-              <folding />
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="462">
+                <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="printing.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/printing.py">
+      <file leaf-file-name="skip_list.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skip_list.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,12 +142,21 @@
       <find>&lt;1000</find>
       <find>21</find>
       <find>478\n</find>
-      <find>is None</find>
       <find>print</find>
       <find>self._nil</find>
+      <find>self.root</find>
+      <find>is None</find>
+      <find>_nil</find>
+      <find>= RedBlackNode(</find>
+      <find>is not None</find>
+      <find>= None</find>
     </findStrings>
     <replaceStrings>
       <replace>_nil</replace>
+      <replace>== _nil</replace>
+      <replace>_NIL</replace>
+      <replace>!= _nil</replace>
+      <replace>= _nil</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -155,7 +171,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/util/printing.py" />
+        <option value="$PROJECT_DIR$/skip_list.py" />
         <option value="$PROJECT_DIR$/red_black_tree.py" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -179,8 +197,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -350,30 +368,31 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43852013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42256042" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20842217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5212187" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -391,26 +410,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="747" column="19" lean-forward="false" selection-start-line="747" selection-start-column="19" selection-end-line="747" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/printing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/red_black_tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="478" column="16" lean-forward="false" selection-start-line="478" selection-start-column="16" selection-end-line="478" selection-end-column="16" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#663#1" expanded="false" />
             <element signature="e#709#2754#0" expanded="false" />
@@ -484,7 +487,145 @@
             <element signature="e#13343#13441#0" expanded="false" />
             <element signature="e#13508#13581#0" expanded="false" />
             <element signature="e#13647#13722#0" expanded="false" />
+            <element signature="e#13755#13802#0" expanded="false" />
+            <element signature="e#13836#14245#0" expanded="false" />
+            <element signature="e#14058#14155#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16434">
+          <caret line="747" column="19" lean-forward="false" selection-start-line="747" selection-start-column="19" selection-end-line="747" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/printing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16258">
+          <caret line="747" column="19" lean-forward="false" selection-start-line="747" selection-start-column="19" selection-end-line="747" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/printing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skip_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red_black_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="373" column="0" lean-forward="true" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#663#1" expanded="false" />
+            <element signature="e#709#2754#0" expanded="false" />
+            <element signature="e#755#878#0" expanded="false" />
+            <element signature="e#927#1057#0" expanded="false" />
+            <element signature="e#1107#1238#0" expanded="false" />
+            <element signature="e#1284#1360#0" expanded="false" />
+            <element signature="e#1407#1484#0" expanded="false" />
+            <element signature="e#1539#1686#0" expanded="false" />
+            <element signature="e#1539#1595#1" expanded="false" />
+            <element signature="e#1742#1825#0" expanded="false" />
+            <element signature="e#1876#1957#0" expanded="false" />
+            <element signature="e#2002#2282#0" expanded="false" />
+            <element signature="e#2329#2450#0" expanded="false" />
+            <element signature="e#2486#2581#0" expanded="false" />
+            <element signature="e#2615#2674#0" expanded="false" />
+            <element signature="e#2707#2754#0" expanded="false" />
+            <element signature="e#2845#2861#0" expanded="false" />
+            <element signature="e#2900#3135#0" expanded="false" />
+            <element signature="e#2934#3065#0" expanded="false" />
+            <element signature="e#3183#3888#0" expanded="false" />
+            <element signature="e#3214#3509#0" expanded="false" />
+            <element signature="e#3252#3435#0" expanded="false" />
+            <element signature="e#3551#3849#0" expanded="false" />
+            <element signature="e#3590#3774#0" expanded="false" />
+            <element signature="e#3927#4046#0" expanded="false" />
+            <element signature="e#4087#4207#0" expanded="false" />
+            <element signature="e#4256#4630#0" expanded="false" />
+            <element signature="e#4287#4390#0" expanded="false" />
+            <element signature="e#4432#4537#0" expanded="false" />
+            <element signature="e#4673#4796#0" expanded="false" />
+            <element signature="e#4839#4961#0" expanded="false" />
+            <element signature="e#5005#6334#0" expanded="false" />
+            <element signature="e#5005#5290#1" expanded="false" />
+            <element signature="e#5352#5394#0" expanded="false" />
+            <element signature="e#5562#5715#0" expanded="false" />
+            <element signature="e#5832#5884#0" expanded="false" />
+            <element signature="e#5985#6039#0" expanded="false" />
+            <element signature="e#6340#6341#0" expanded="false" />
+            <element signature="e#7665#8613#0" expanded="false" />
+            <element signature="e#7665#7769#1" expanded="false" />
+            <element signature="e#7834#7957#0" expanded="false" />
+            <element signature="e#8024#8149#0" expanded="false" />
+            <element signature="e#8192#8575#0" expanded="false" />
+            <element signature="e#8240#8315#0" expanded="false" />
+            <element signature="e#8662#9586#0" expanded="false" />
+            <element signature="e#8662#8744#1" expanded="false" />
+            <element signature="e#8965#9024#0" expanded="false" />
+            <element signature="e#9094#9219#0" expanded="false" />
+            <element signature="e#9453#9569#0" expanded="false" />
+            <element signature="e#9629#11825#0" expanded="false" />
+            <element signature="e#9629#9683#1" expanded="false" />
+            <element signature="e#9745#9795#0" expanded="false" />
+            <element signature="e#9879#10152#0" expanded="false" />
+            <element signature="e#10413#10495#0" expanded="false" />
+            <element signature="e#10672#10772#0" expanded="false" />
+            <element signature="e#10800#11825#0" expanded="false" />
+            <element signature="e#10848#11825#0" expanded="false" />
+            <element signature="e#11002#11136#0" expanded="false" />
+            <element signature="e#11310#11445#0" expanded="false" />
+            <element signature="e#11614#11698#0" expanded="false" />
+            <element signature="e#11741#11825#0" expanded="false" />
+            <element signature="e#11891#11956#0" expanded="false" />
+            <element signature="e#12000#12909#0" expanded="false" />
+            <element signature="e#12000#12339#1" expanded="false" />
+            <element signature="e#12384#12419#0" expanded="false" />
+            <element signature="e#12811#12909#0" expanded="false" />
+            <element signature="e#12954#13441#0" expanded="false" />
+            <element signature="e#12954#13001#1" expanded="false" />
+            <element signature="e#13046#13081#0" expanded="false" />
+            <element signature="e#13343#13441#0" expanded="false" />
+            <element signature="e#13508#13581#0" expanded="false" />
+            <element signature="e#13647#13722#0" expanded="false" />
+            <element signature="e#13755#13802#0" expanded="false" />
+            <element signature="e#13836#14245#0" expanded="false" />
+            <element signature="e#14058#14155#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="462">
+            <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
