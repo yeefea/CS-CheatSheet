@@ -57,6 +57,7 @@ Graph algorithms:
 Design patterns:
 * [Abstract factory](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/abstract_factory.py)
 * [Bridge](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/bridge.py)
+* [Intercepting filter](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/filter.py)
 * [Flyweight](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/flyweight.py)
 * [Observer](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/observer.py)
 * [State](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/state.py)
