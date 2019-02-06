@@ -43,7 +43,7 @@ Data structures:
 * [Binary search tree](https://github.com/Blueswing/AUD/blob/master/src/data_structure/tree/BinarySearchTree.java)
 * [AVL tree](https://github.com/Blueswing/AUD/blob/master/src/data_structure/tree/AVLTree.java)
 * [Splay tree](https://github.com/Blueswing/AUD/blob/master/src/data_structure/tree/SplayTree.java)
-* [Red black tree](https://github.com/Blueswing/AUD_Python/blob/master/red_black_tree.py)
+* [Red black tree](https://github.com/Blueswing/AUD_Python/blob/master/data_structure/red_black_tree.py)
 * [Skip list](https://github.com/Blueswing/AUD_Python/blob/master/data_structure/skip_list.py)
 * [Disjoint sets](https://github.com/Blueswing/AUD/blob/master/src/data_structure/DisjointSets.java)
 * [Directed graph](https://github.com/Blueswing/AUD/blob/master/src/data_structure/graph/DirectedGraph.java)
@@ -53,3 +53,10 @@ Data structures:
 Graph algorithms:
 * [Breadth first search]()
 * [Depth first search]()
+
+Design patterns:
+* [Abstract factory](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/abstract_factory.py)
+* [Bridge](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/bridge.py)
+* [Flyweight](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/flyweight.py)
+* [Observer](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/observer.py)
+* [State](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/state.py)
