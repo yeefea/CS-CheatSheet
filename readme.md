@@ -65,6 +65,8 @@ Design patterns:
 * [Command](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/command.py)
 * [Composite](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/composite.py)
 * [Intercepting filter](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/filter.py)
+* [Facade](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/facade.py)
 * [Flyweight](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/flyweight.py)
 * [Observer](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/observer.py)
+* [Proxy](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/proxy.py)
 * [State](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/state.py)
