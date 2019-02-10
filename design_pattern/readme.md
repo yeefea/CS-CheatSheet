@@ -1,0 +1,1 @@
+See https://en.wikipedia.org/wiki/Software_design_pattern for more details.
