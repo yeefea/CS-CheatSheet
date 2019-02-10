@@ -55,7 +55,10 @@ Graph algorithms:
 * [Depth first search]()
 
 Design patterns:
+* [Simple factory](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/simple_factory.py)
+* [Factory method](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/factory_method.py)
 * [Abstract factory](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/abstract_factory.py)
+* [Singleton](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/singleton.py)
 * [Adapter](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/adapter.py)
 * [Bridge](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/bridge.py)
 * [Chain of responsibility](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/chain.py)

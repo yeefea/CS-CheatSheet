@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d513dd7a-7ca0-43ea-8b54-b34fb86b7f5a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/design_pattern/adapter.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design_pattern/composite.py" />
+    <list default="true" id="d513dd7a-7ca0-43ea-8b54-b34fb86b7f5a" name="Default" comment="update: adapter pattern, composite pattern">
+      <change beforePath="" afterPath="$PROJECT_DIR$/design_pattern/factory_method.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design_pattern/simple_factory.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design_pattern/singleton.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/factory.py" afterPath="$PROJECT_DIR$/design_pattern/abstract_factory.py" />
       <change beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,32 +18,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="adapter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/design_pattern/adapter.py">
+      <file leaf-file-name="abstract_factory.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/design_pattern/abstract_factory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state relative-caret-position="418">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composite.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/design_pattern/composite.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="944">
-              <caret line="49" column="10" lean-forward="true" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="392">
-                <caret line="62" column="53" lean-forward="false" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+              <first_editor relative-caret-position="348">
+                <caret line="60" column="12" lean-forward="false" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -49,11 +41,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="simple_factory.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/design_pattern/simple_factory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="singleton.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/design_pattern/singleton.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.IdeaIC2017.3/system/python_stubs/138991001/builtins.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="585" column="23" lean-forward="true" selection-start-line="585" selection-start-column="23" selection-end-line="585" selection-end-column="23" />
+            <state relative-caret-position="254">
+              <caret line="5461" column="8" lean-forward="false" selection-start-line="5461" selection-start-column="8" selection-end-line="5461" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="factory_method.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/design_pattern/factory_method.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="61" column="33" lean-forward="false" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -97,6 +119,8 @@
       <replace>!= _nil</replace>
       <replace>= _nil</replace>
       <replace>'</replace>
+      <replace>def get_shape(self)</replace>
+      <replace>def get_shape(self):</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -125,7 +149,6 @@
         <option value="$PROJECT_DIR$/data_structure/array_list.py" />
         <option value="$PROJECT_DIR$/data_structure/skip_list.py" />
         <option value="$PROJECT_DIR$/design_pattern/flyweight.py" />
-        <option value="$PROJECT_DIR$/design_pattern/factory.py" />
         <option value="$PROJECT_DIR$/design_pattern/state.py" />
         <option value="$PROJECT_DIR$/design_pattern/observer.py" />
         <option value="$PROJECT_DIR$/design_pattern/bridge.py" />
@@ -134,13 +157,18 @@
         <option value="$PROJECT_DIR$/design_pattern/command.py" />
         <option value="$PROJECT_DIR$/design_pattern/adapter.py" />
         <option value="$PROJECT_DIR$/design_pattern/composite.py" />
+        <option value="$PROJECT_DIR$/design_pattern/factory.py" />
+        <option value="$PROJECT_DIR$/design_pattern/Singleton.py" />
+        <option value="$PROJECT_DIR$/design_pattern/simple_factory.py" />
+        <option value="$PROJECT_DIR$/design_pattern/abstract_factory.py" />
+        <option value="$PROJECT_DIR$/design_pattern/factory_method.py" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/design_pattern/singleton.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -208,7 +236,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.composite">
+  <component name="RunManager" selected="Python.singleton">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -250,7 +278,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="adapter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="abstract_factory" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -262,43 +290,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="AUD_Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/design_pattern/adapter.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="chain" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/design_pattern" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AUD_Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/design_pattern/chain.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="command" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/design_pattern" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AUD_Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/design_pattern/command.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/design_pattern/abstract_factory.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -322,7 +314,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="filter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="factory_method" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -334,7 +326,43 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="AUD_Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/design_pattern/filter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/design_pattern/factory_method.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="simple_factory" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/design_pattern" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AUD_Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/design_pattern/simple_factory.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="singleton" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/design_pattern" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AUD_Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/design_pattern/singleton.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -381,19 +409,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.filter" />
-      <item index="1" class="java.lang.String" itemvalue="Python.chain" />
-      <item index="2" class="java.lang.String" itemvalue="Python.command" />
-      <item index="3" class="java.lang.String" itemvalue="Python.adapter" />
-      <item index="4" class="java.lang.String" itemvalue="Python.composite" />
+      <item index="0" class="java.lang.String" itemvalue="Python.composite" />
+      <item index="1" class="java.lang.String" itemvalue="Python.simple_factory" />
+      <item index="2" class="java.lang.String" itemvalue="Python.factory_method" />
+      <item index="3" class="java.lang.String" itemvalue="Python.abstract_factory" />
+      <item index="4" class="java.lang.String" itemvalue="Python.singleton" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.composite" />
-        <item index="1" class="java.lang.String" itemvalue="Python.adapter" />
-        <item index="2" class="java.lang.String" itemvalue="Python.command" />
-        <item index="3" class="java.lang.String" itemvalue="Python.chain" />
-        <item index="4" class="java.lang.String" itemvalue="Python.filter" />
+        <item index="0" class="java.lang.String" itemvalue="Python.singleton" />
+        <item index="1" class="java.lang.String" itemvalue="Python.abstract_factory" />
+        <item index="2" class="java.lang.String" itemvalue="Python.factory_method" />
+        <item index="3" class="java.lang.String" itemvalue="Python.simple_factory" />
+        <item index="4" class="java.lang.String" itemvalue="Python.composite" />
       </list>
     </recent_temporary>
   </component>
@@ -509,11 +537,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549475440824</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update: adapter pattern, composite pattern">
+      <created>1549645173507</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1549645173507</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -523,25 +558,25 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32527474" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32535365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11940298" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58752733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5153846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.515778" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -589,7 +624,8 @@
     <MESSAGE value="update: bridge pattern, filter pattern" />
     <MESSAGE value="update: chain pattern" />
     <MESSAGE value="update: command pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: command pattern" />
+    <MESSAGE value="update: adapter pattern, composite pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: adapter pattern, composite pattern" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -748,13 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design_pattern/factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/design_pattern/bridge.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -791,15 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.IdeaIC2017.3/system/python_stubs/138991001/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="585" column="23" lean-forward="true" selection-start-line="585" selection-start-column="23" selection-end-line="585" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,14 +839,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/design_pattern/simple_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design_pattern/factory_method.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="61" column="33" lean-forward="false" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design_pattern/abstract_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.IdeaIC2017.3/system/python_stubs/138991001/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="5461" column="8" lean-forward="false" selection-start-line="5461" selection-start-column="8" selection-end-line="5461" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="392">
-            <caret line="62" column="53" lean-forward="false" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+          <first_editor relative-caret-position="348">
+            <caret line="60" column="12" lean-forward="false" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design_pattern/singleton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
