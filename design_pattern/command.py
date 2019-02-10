@@ -130,15 +130,16 @@ class CommandStack:
         pass
 
 
-light = Light()
-radio = Radio()
+if __name__ == '__main__':
+    light = Light()
+    radio = Radio()
 
-SwitchLightCommand(light).execute()
-RadioOnCommand(radio).execute()
-RadioTurnUpCommand(radio).execute()
-RadioTurnUpCommand(radio).execute()
-RadioTurnDownCommand(radio).execute()
-RadioAMCommand(radio).execute()
-RadioFMCommand(radio).execute()
-RadioOffCommand(radio).execute()
-SwitchLightCommand(light).execute()
+    SwitchLightCommand(light).execute()
+    RadioOnCommand(radio).execute()
+    RadioTurnUpCommand(radio).execute()
+    RadioTurnUpCommand(radio).execute()
+    RadioTurnDownCommand(radio).execute()
+    RadioAMCommand(radio).execute()
+    RadioFMCommand(radio).execute()
+    RadioOffCommand(radio).execute()
+    SwitchLightCommand(light).execute()

@@ -30,11 +30,12 @@ class Circle(Shape):
         self.draw_api.draw_circle(self.x, self.y, self.radius, self.rgba)
 
 
-plot = Plot2D()
-render = Render3D()
-red_circle = Circle(0, 0, 1, '#ff0000', plot)
-green_circel = Circle(1, 1, 3, '#00ff00', render)
-red_circle.draw()
-green_circel.draw()
-red_circle.draw_api = render
-red_circle.draw()
+if __name__ == '__main__':
+    plot = Plot2D()
+    render = Render3D()
+    red_circle = Circle(0, 0, 1, '#ff0000', plot)
+    green_circel = Circle(1, 1, 3, '#00ff00', render)
+    red_circle.draw()
+    green_circel.draw()
+    red_circle.draw_api = render
+    red_circle.draw()

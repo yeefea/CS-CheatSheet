@@ -82,16 +82,17 @@ class FilterManager:
         return [p for p in person_list if self.flt.apply(p)]
 
 
-p1 = Person('David', MALE, 40)
-p2 = Person('John', MALE, 80)
-p3 = Person('Alice', FEMALE, 15)
-person_list = [p1, p2, p3]
+if __name__ == '__main__':
+    p1 = Person('David', MALE, 40)
+    p2 = Person('John', MALE, 80)
+    p3 = Person('Alice', FEMALE, 15)
+    person_list = [p1, p2, p3]
 
-f_age = AgeFilter(18, 70)
-f_age_young = AgeFilter(11, 15)
-f_or = OrFilterChain([f_age, f_age_young])
-f = AndFilterChain([GenderFilter(FEMALE), f_or])
+    f_age = AgeFilter(18, 70)
+    f_age_young = AgeFilter(11, 15)
+    f_or = OrFilterChain([f_age, f_age_young])
+    f = AndFilterChain([GenderFilter(FEMALE), f_or])
 
-manager = FilterManager(f_or)
-res = manager.filter(person_list)
-print(res)
+    manager = FilterManager(f_or)
+    res = manager.filter(person_list)
+    print(res)

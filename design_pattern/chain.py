@@ -38,12 +38,13 @@ class DefaultHandler(Handler):
         return True
 
 
-h0 = SuccessMessageHandler()
-h1 = ErrorMessageHandler()
-h2 = DefaultHandler()
-h0.successor = h1
-h1.successor = h2
+if __name__ == '__main__':
+    h0 = SuccessMessageHandler()
+    h1 = ErrorMessageHandler()
+    h2 = DefaultHandler()
+    h0.successor = h1
+    h1.successor = h2
 
-requests = ['success: hahaha', 'error: exception', 1]
-for request in requests:
-    h0.handle(request)
+    requests = ['success: hahaha', 'error: exception', 1]
+    for request in requests:
+        h0.handle(request)

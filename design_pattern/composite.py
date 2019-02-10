@@ -30,21 +30,22 @@ class Intern(Employee):
         return None
 
 
-founder = Employee('Steve')
-ceo = Employee('Tim')
-john = Employee('John')
-david = Employee('david')
+if __name__ == '__main__':
+    founder = Employee('Steve')
+    ceo = Employee('Tim')
+    john = Employee('John')
+    david = Employee('david')
 
-intern1 = Intern('student1')
-intern2 = Intern('student2')
-intern3 = Intern('student3')
+    intern1 = Intern('student1')
+    intern2 = Intern('student2')
+    intern3 = Intern('student3')
 
-founder.add_subordinate(ceo)
-ceo.add_subordinate(john)
-ceo.add_subordinate(david)
-david.add_subordinate(intern1)
-david.add_subordinate(intern2)
-john.add_subordinate(intern3)
+    founder.add_subordinate(ceo)
+    ceo.add_subordinate(john)
+    ceo.add_subordinate(david)
+    david.add_subordinate(intern1)
+    david.add_subordinate(intern2)
+    john.add_subordinate(intern3)
 
-sub = list(founder.get_subordinates())
-print(sub)
+    sub = list(founder.get_subordinates())
+    print(sub)
