@@ -1,16 +1,20 @@
 # AUD - Algorithms and data structures
 
-Algorithms:
+## 算法:
 
-Sorting algorithms:
-* [Bubble sort](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-* [Insertion sort](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-* [Shell sort](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-* [Heap sort](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-* [Merge sort](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-* [Quick sort](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+排序算法:
+* [冒泡排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+* [插入排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+* [希尔排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+* [堆排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+* [归并排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+* [快速排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
 
-Dynamic programming:
+图算法:
+* [Breadth first search]()
+* [Depth first search]()
+
+动态规划:
 * [Fastest way](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L11)
 * [Climbing steps](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L65)
 * [01 Knapsack problem](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L93)
@@ -27,13 +31,13 @@ LeetCode:
 * [String to integer](https://github.com/Blueswing/AUD_Python/blob/master/leetcode/8_string_to_integer.py)
 * [Largest number](https://github.com/Blueswing/AUD_Python/blob/master/leetcode/largest_number.py)
 
-Others:
+其他:
 * [Hanoi tower](https://github.com/Blueswing/AUD/blob/master/src/algorithm/recursion/HanoiTower.java)
 * [Max subarray problem](https://github.com/Blueswing/AUD/blob/master/src/algorithm/dynamic_programming/MaximumSubArray.java)
 * [Is power of 2](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
 * [Count 1's in a binary number](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
 
-Data structures:
+## 数据结构:
 
 * [Array list](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/ArrayList.java)
 * [Linked list](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/LinkedList.java)
@@ -51,31 +55,37 @@ Data structures:
 * [Undirected graph](https://github.com/Blueswing/AUD/blob/master/src/data_structure/graph/UndirectedGraph.java)
 * [Weighted directed graph](https://github.com/Blueswing/AUD/blob/master/src/data_structure/graph/WeightedGraph.java)
 
-Graph algorithms:
-* [Breadth first search]()
-* [Depth first search]()
 
-Design patterns:
-* [Simple factory](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/simple_factory.py)
-* [Factory method](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/factory_method.py)
-* [Abstract factory](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/abstract_factory.py)
-* [Singleton](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/singleton.py)
-* [Adapter](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/adapter.py)
-* [Builder](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/builder.py)
-* [Bridge](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/bridge.py)
-* [Chain of responsibility](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/chain.py)
-* [Command](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/command.py)
-* [Composite](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/composite.py)
-* [Decorator](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/decorator.py)
-* [Intercepting filter](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/filter.py)
-* [Facade](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/facade.py)
-* [Flyweight](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/flyweight.py)
-* [Memento](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/memento.py)
-* [Observer](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/observer.py)
-* [Proxy](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/proxy.py)
-* [Iterator](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/iterator.py)
-* [Interpreter]()
-* [State](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/state.py)
-* [Strategy](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/strategy.py)
-* [Template]()
-* [Visitor](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/visitor.py)
+## 设计模式
+
+### 创建型模式
+* [简单工厂 Simple factory](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/simple_factory.py)
+* [工厂方法 Factory method](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/factory_method.py)
+* [抽象工厂 Abstract factory](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/abstract_factory.py)
+* [建造者 Builder](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/builder.py)
+* [单例 Singleton](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/singleton.py)
+* [原型 Prototype](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/prototype.py)
+
+### 结构型模式
+* [适配器 Adapter](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/adapter.py)
+* [桥接 Bridge](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/bridge.py)
+* [组合 Composite](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/composite.py)
+* [装饰器 Decorator](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/decorator.py)
+* [外观 Facade](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/facade.py)
+* [享元 Flyweight](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/flyweight.py)
+* [代理 Proxy](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/proxy.py)
+
+# 行为型模式
+* [责任链 Chain of responsibility](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/chain.py)
+* [命令 Command](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/command.py)
+* [迭代器 Iterator](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/iterator.py)
+* [中介者 Mediator](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/mediator.py)
+* [备忘录 Memento](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/memento.py)
+* [观察者 Observer](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/observer.py)
+* [状态 State](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/state.py)
+* [策略 Strategy](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/strategy.py)
+* [模板方法 Template method](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/template_method.py)
+* [访问者 Visitor](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/visitor.py)
+
+### 其他设计模式
+* [拦截过滤器 Intercepting filter](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/filter.py)
