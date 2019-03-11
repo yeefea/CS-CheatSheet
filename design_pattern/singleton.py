@@ -1,20 +1,29 @@
-class Singleton(type):
-    def __init__(self, *args, **kwargs):
-        self.__instance = None
-        super(Singleton, self).__init__(*args, **kwargs)
-
-    def __call__(self, *args, **kwargs):
-        if self.__instance is None:
-            self.__instance = super(Singleton, self).__call__(*args, **kwargs)
-        return self.__instance
+import threading
 
 
-class S(metaclass=Singleton):
+def synchronized(func):
 
-    def __init__(self):
-        print('init class S')
+    func.__lock__ = threading.Lock()
+
+    def lock_func(*args, **kwargs):
+        with func.__lock__:
+            return func(*args, **kwargs)
+    return lock_func
+
+
+class Singleton(object):
+    """
+    单例模式
+    """
+    instance = None
+
+    @synchronized
+    def __new__(cls, *args, **kwargs):
+        if cls.instance is None:
+            cls.instance = object.__new__(cls, *args, **kwargs)
+        return cls.instance
 
 
 if __name__ == '__main__':
     for i in range(5):
-        S()
+        Singleton()
