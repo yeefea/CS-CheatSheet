@@ -19,17 +19,7 @@
 * [Climbing steps](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L65)
 * [01 Knapsack problem](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L93)
 
-### LeetCode:
-* [Two sum](https://github.com/Blueswing/AUD/blob/master/src/algorithm/LeetCode.java)
-* [Reverse integer](https://github.com/Blueswing/AUD/blob/master/src/algorithm/LeetCode.java)
-* [Is palindrome](https://github.com/Blueswing/AUD/blob/master/src/algorithm/LeetCode.java)
-* [Add two numbers](https://github.com/Blueswing/AUD/blob/master/src/algorithm/LeetCode.java)
-* [Longest common prefix](https://github.com/Blueswing/AUD/blob/master/src/algorithm/LeetCode.java)
-* [Is valid parenthesis](https://github.com/Blueswing/AUD/blob/master/src/algorithm/LeetCode.java)
-* [Length of longest substring with no repeating character](https://github.com/Blueswing/AUD/blob/master/src/algorithm/LeetCode.java)
-* [Remove duplicated elements](https://github.com/Blueswing/AUD/blob/master/src/algorithm/LeetCode.java)
-* [String to integer](https://github.com/Blueswing/AUD_Python/blob/master/leetcode/8_string_to_integer.py)
-* [Largest number](https://github.com/Blueswing/AUD_Python/blob/master/leetcode/largest_number.py)
+### [LeetCode](https://github.com/Blueswing/AUD_Python/tree/master/leetcode)
 
 ### 其他算法:
 * [Hanoi tower](https://github.com/Blueswing/AUD/blob/master/src/algorithm/recursion/HanoiTower.java)
