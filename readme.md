@@ -1,8 +1,8 @@
 # 计算机基础知识集锦
 
-## 算法:
+## 算法
 
-### 排序算法:
+### 排序算法
 * [冒泡排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
 * [插入排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
 * [希尔排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
@@ -10,25 +10,35 @@
 * [归并排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
 * [快速排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
 
-### 图算法:
+### 图算法
 * [Breadth first search]()
 * [Depth first search]()
 
-### 动态规划:
+### 五种经典算法：分治法、动态规划、回溯法、分支界限法、贪心算法 
+
+### 分治法
+
+### 动态规划
 * [Fastest way](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L11)
 * [Climbing steps](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L65)
 * [01 Knapsack problem](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L93)
 
+### 回溯法
+
+### 分支界限法
+
+### 贪心算法
+
 ### [LeetCode](https://github.com/Blueswing/AUD_Python/tree/master/leetcode)
 
-### 其他算法:
+### 其他算法
 * [Hanoi tower](https://github.com/Blueswing/AUD/blob/master/src/algorithm/recursion/HanoiTower.java)
 * [Max subarray problem](https://github.com/Blueswing/AUD/blob/master/src/algorithm/dynamic_programming/MaximumSubArray.java)
 * [Is power of 2](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
 * [Count 1's in a binary number](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
 
 
-## 数据结构:
+## 数据结构
 * [Array list](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/ArrayList.java)
 * [Linked list](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/LinkedList.java)
 * [Blockchain](https://github.com/Blueswing/AUD_Python/blob/master/data_structure/blockchain.py)

@@ -5,7 +5,8 @@
 
 输入：1->2->4, 1->3->4
 输出：1->1->2->3->4->4
-解题思路：链表
+解题思路：链表构建，假节点
+
 """
 
 
@@ -22,6 +23,23 @@ class Solution:
         if not l2:
             return l1
         
-        tmp = l1
+        dummy = ListNode(None)
+        last = dummy
         while True:
+            if l1 is None and l2 is None:
+                break
+            if l1 is None:
+                last.next = l2
+                l2 = l2.next
+            elif l2 is None:
+                last.next = l1
+                l1 = l1.next
+            elif l1.val < l2.val:
+                last.next = l1
+                l1 = l1.next
+            else:
+                last.next = l2
+                l2 = l2.next
+            last = last.next
+        return dummy.next
             
