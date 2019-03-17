@@ -11,19 +11,20 @@
 * [快速排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
 
 ### 图算法
-* [Breadth first search]()
-* [Depth first search]()
+* [广度优先搜索]()
+* [深度优先搜索]()
 
 ### 五种经典算法：分治法、动态规划、回溯法、分支界限法、贪心算法 
 
 ### 分治法
 
 ### 动态规划
-* [Fastest way](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L11)
-* [Climbing steps](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L65)
-* [01 Knapsack problem](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L93)
+* [最快流水线问题](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L11)
+* [爬楼梯问题](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L65)
+* [0/1背包问题](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L93)
 
 ### 回溯法
+* [生成括号](https://github.com/Blueswing/AUD_Python/tree/master/leetcode/22——generate_parenthesis.py)
 
 ### 分支界限法
 
@@ -32,28 +33,28 @@
 ### [LeetCode](https://github.com/Blueswing/AUD_Python/tree/master/leetcode)
 
 ### 其他算法
-* [Hanoi tower](https://github.com/Blueswing/AUD/blob/master/src/algorithm/recursion/HanoiTower.java)
-* [Max subarray problem](https://github.com/Blueswing/AUD/blob/master/src/algorithm/dynamic_programming/MaximumSubArray.java)
-* [Is power of 2](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
-* [Count 1's in a binary number](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
+* [汉诺塔](https://github.com/Blueswing/AUD/blob/master/src/algorithm/recursion/HanoiTower.java)
+* [最大子数组](https://github.com/Blueswing/AUD/blob/master/src/algorithm/dynamic_programming/MaximumSubArray.java)
+* [2的次方](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
+* [二进制数字中1的个数](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
 
 
 ## 数据结构
-* [Array list](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/ArrayList.java)
-* [Linked list](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/LinkedList.java)
-* [Blockchain](https://github.com/Blueswing/AUD_Python/blob/master/data_structure/blockchain.py)
-* [Stack](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/Stack.java)
-* [Minimal stack](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/MinStack.java)
-* [Queue](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/QueueList.java)
-* [Binary search tree](https://github.com/Blueswing/AUD/blob/master/src/data_structure/tree/BinarySearchTree.java)
-* [AVL tree](https://github.com/Blueswing/AUD/blob/master/src/data_structure/tree/AVLTree.java)
-* [Splay tree](https://github.com/Blueswing/AUD/blob/master/src/data_structure/tree/SplayTree.java)
-* [Red black tree](https://github.com/Blueswing/AUD_Python/blob/master/data_structure/red_black_tree.py)
-* [Skip list](https://github.com/Blueswing/AUD_Python/blob/master/data_structure/skip_list.py)
-* [Disjoint sets](https://github.com/Blueswing/AUD/blob/master/src/data_structure/DisjointSets.java)
-* [Directed graph](https://github.com/Blueswing/AUD/blob/master/src/data_structure/graph/DirectedGraph.java)
-* [Undirected graph](https://github.com/Blueswing/AUD/blob/master/src/data_structure/graph/UndirectedGraph.java)
-* [Weighted directed graph](https://github.com/Blueswing/AUD/blob/master/src/data_structure/graph/WeightedGraph.java)
+* [数组表](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/ArrayList.java)
+* [链表](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/LinkedList.java)
+* [区块链](https://github.com/Blueswing/AUD_Python/blob/master/data_structure/blockchain.py)
+* [栈](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/Stack.java)
+* [最小栈](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/MinStack.java)
+* [队列](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/QueueList.java)
+* [二叉查找树](https://github.com/Blueswing/AUD/blob/master/src/data_structure/tree/BinarySearchTree.java)
+* [AVL树](https://github.com/Blueswing/AUD/blob/master/src/data_structure/tree/AVLTree.java)
+* [伸展树](https://github.com/Blueswing/AUD/blob/master/src/data_structure/tree/SplayTree.java)
+* [红黑树](https://github.com/Blueswing/AUD_Python/blob/master/data_structure/red_black_tree.py)
+* [跳跃表](https://github.com/Blueswing/AUD_Python/blob/master/data_structure/skip_list.py)
+* [不相交集类](https://github.com/Blueswing/AUD/blob/master/src/data_structure/DisjointSets.java)
+* [有向图](https://github.com/Blueswing/AUD/blob/master/src/data_structure/graph/DirectedGraph.java)
+* [无向图](https://github.com/Blueswing/AUD/blob/master/src/data_structure/graph/UndirectedGraph.java)
+* [加权有向图](https://github.com/Blueswing/AUD/blob/master/src/data_structure/graph/WeightedGraph.java)
 
 
 ## 设计模式
@@ -79,6 +80,7 @@
 * [责任链 Chain of responsibility](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/chain.py)
 * [命令 Command](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/command.py)
 * [迭代器 Iterator](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/iterator.py)
+* [解释器 Interpreter](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/interpreter.py)
 * [中介者 Mediator](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/mediator.py)
 * [备忘录 Memento](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/memento.py)
 * [观察者 Observer](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/observer.py)
