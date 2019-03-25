@@ -24,7 +24,7 @@
 * [0/1背包问题](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L93)
 
 ### 回溯法
-* [生成括号](https://github.com/Blueswing/AUD_Python/tree/master/leetcode/22——generate_parenthesis.py)
+* [生成括号](https://github.com/Blueswing/AUD_Python/tree/master/leetcode/22_generate_parenthesis.py)
 
 ### 分支界限法
 
@@ -37,7 +37,7 @@
 * [最大子数组](https://github.com/Blueswing/AUD/blob/master/src/algorithm/dynamic_programming/MaximumSubArray.java)
 * [2的次方](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
 * [二进制数字中1的个数](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
-
+* [K路归并](https://github.com/Blueswing/AUD_Python/tree/master/algorithm/k_way_merge.py)
 
 ## 数据结构
 * [数组表](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/ArrayList.java)
