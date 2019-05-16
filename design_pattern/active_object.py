@@ -7,7 +7,7 @@ class ActiveObject:
     def __init__(self):
         self._q = queue.Queue()
         self._thread = Thread(target=self.__run)
-    
+
     def __run(self):
         while True:
             self._q.get()()
@@ -18,7 +18,9 @@ class ActiveObject:
     def run(self, func):
         self._q.put(func)
 
-var = 0    
+
+var = 0
+
 
 def test_print():
     global var
@@ -29,6 +31,7 @@ def test_print():
 if __name__ == '__main__':
     import time
     import os
+
     ao = ActiveObject()
     ao.start()
     for _ in range(5):
