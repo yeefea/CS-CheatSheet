@@ -1,4 +1,6 @@
-# from collections import heapq
+"""
+K 路归并
+"""
 from heapq import merge
 
 def k_way_merge_builtin():
