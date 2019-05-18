@@ -37,3 +37,5 @@
 [什么是SOLID原则（第2部分）](https://segmentfault.com/a/1190000017481146)
 
 [什么是SOLID原则（第3部分）](https://segmentfault.com/a/1190000017487382)
+
+[详解控制反转、依赖注入](https://www.zhihu.com/question/23277575)
