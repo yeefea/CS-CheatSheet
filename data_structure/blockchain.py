@@ -1,6 +1,5 @@
-import hashlib
 import json
-import time
+import hashlib
 from time import time
 
 
@@ -27,11 +26,11 @@ class Block:
         """
         return self.__dict__
 
-    def json(self):
+    def jsonify(self):
         return json.dumps(self.as_dict())
 
     def hash(self):
-        return hashlib.sha256(self.json().encode('utf-8')).hexdigest()
+        return hashlib.sha256(self.jsonify().encode('utf-8')).hexdigest()
 
 
 class Blockchain:

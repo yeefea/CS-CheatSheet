@@ -1,19 +1,20 @@
 from collections import deque
 
+
 class BinaryNode:
-    
+
     def __init__(self, value):
         self.value = value
         self.left_child = None
         self.right_child = None
-    
+
 
 class BinaryTree:
-    
+
     def __init__(self, root: BinaryNode):
         self.root = root
-    
-    def print(self):
+
+    def print_tree(self):
         """
         层序遍历并且打印二叉树
         """
@@ -22,11 +23,11 @@ class BinaryTree:
         n_last = self.root
         while len(q) > 0:
             n = q.popleft()
-            is_last = bool(n_last==n)
+            is_last = bool(n_last == n)
             if is_last:
                 print(n.value)
             else:
-                print(n.value, end='')
+                print(n.value, end=' ')
             if n.left_child:
                 q.append(n.left_child)
                 if is_last:
@@ -50,5 +51,4 @@ if __name__ == '__main__':
     node2.right_child = node5
 
     tree = BinaryTree(node1)
-    tree.print()
-                
+    tree.print_tree()
