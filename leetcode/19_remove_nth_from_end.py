@@ -17,48 +17,58 @@
 
 dummy->1->2->3->4->5, n=2
              |     |
-            ptr1  ptr2
+            ptr2  ptr1
 
-删除ptr1.next
-ptr1.next = ptr1.next.next
+删除ptr2.next
+ptr2.next = ptr2.next.next
 返回dummy.next
 """
+from data_structure.linked_list import Node
+
+
+def print_linked_list(head):
+    lst = []
+    while head:
+        lst.append(str(head))
+        head = head.next
+    print('->'.join(lst))
+
+
 class Solution:
 
     def removeNthFromEnd(self, head, n):
-        dummy = ListNode(0)
+        """
+        1 2 3 4 5 6 7 8 9, n=1
+                        |
+                        ptr1
+        :param head:
+        :param n:
+        :return:
+        """
+        if n < 1:
+            return head
+        dummy = Node(0)
         dummy.next = head
         pointer1 = dummy
         pointer2 = dummy
-
-        for _ in range(n):
+        for i in range(n):
             pointer1 = pointer1.next
-
+            if pointer1 is None:
+                return head
         while pointer1.next:
             pointer1 = pointer1.next
             pointer2 = pointer2.next
-        pointer2.next=pointer2.next.next
+        pointer2.next = pointer2.next.next
         return dummy.next
 
-    def removeNthFromEnd_trivial(self, head, n):
-        """
-        一般解法，需要扫描两次
-        """
-        dummy = ListNode(0)
-        dummy.next = head
-        length = 0
-        pre = dummy
-        while pre.next:
-            length += 1
-            pre=pre.next
-        pre = dummy
-        count = 0
-        while pre.next:
-            cur = pre.next
-            if count==length-n:
-                pre.next = cur.next
-                break
-            else:
-                count += 1
-                pre = pre.next
-        return dummy.next
+
+if __name__ == '__main__':
+    sol = Solution()
+    root = Node(1)
+    node = root
+    for i in range(2, 10, 1):
+        node.next = Node(i)
+        node = node.next
+    print_linked_list(root)
+    ret = sol.removeNthFromEnd(root, 9)
+    print_linked_list(ret)

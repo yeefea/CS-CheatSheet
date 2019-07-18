@@ -24,6 +24,10 @@ class SinglyLinkedList:
             current = current.next
             self._size += 1
 
+    @property
+    def left_most(self):
+        return self._head.next
+
     def __len__(self):
         return self._size
 
