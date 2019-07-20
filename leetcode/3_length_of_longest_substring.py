@@ -21,19 +21,24 @@
 解题思路：双指针，滑动窗口
 """
 
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        if not s or len(s) == 0:
-            return 0
-        
-        l, r = 0, 0
-        res, lookup = 0, set()
-        while l < len(s) and r < len(s):
-            if s[r] not in lookup:
-                lookup.add(s[r])
-                res = max(res, r-l+1)
-                r += 1
-            else:
-                lookup.discard(s[l])
-                l += 1
-        return res
+
+def length_of_longest_substring(s: str) -> int:
+    if not s or len(s) == 0:
+        return 0
+
+    l, r = 0, 0
+    res, lookup = 0, set()
+    while l < len(s) and r < len(s):
+        if s[r] not in lookup:
+            lookup.add(s[r])
+            res = max(res, r - l + 1)
+            r += 1
+        else:
+            lookup.discard(s[l])
+            l += 1
+    return res
+
+
+print(length_of_longest_substring('abcabcbb'))
+print(length_of_longest_substring('bbbbbb'))
+print(length_of_longest_substring('pwwkew'))

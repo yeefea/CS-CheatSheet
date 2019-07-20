@@ -14,17 +14,17 @@
 """
 
 
-class Solution:
-    def twoSum(self, nums: list, target: int) -> list:
-        tmp_dict = {}
-        for i, n in enumerate(nums):
-            if target - n in tmp_dict:
-                return [tmp_dict[target-n], i]
-            else:
-                tmp_dict[n] = i
+def two_sum(nums: list, target: int) -> list:
+    tmp_dict = {}  # value -> index
+    for i, n in enumerate(nums):  # index, value
+        if target - n in tmp_dict:
+            return [tmp_dict[target - n], i]  # return [index0, index1]
+        else:
+            tmp_dict[n] = i  # store value -> index
+    return []
 
-sol = Solution()
 
-print(sol.twoSum([1, 3, 7, 4], 5))
-print(sol.twoSum([1, 3, 7, 4], 7))
-print(sol.twoSum([1, 3, 7, 4], 8))
+print(two_sum([1, 3, 7, 4], 5))
+print(two_sum([1, 3, 7, 4], 7))
+print(two_sum([1, 3, 7, 4], 8))
+print(two_sum([1, 3, 7, 4], 9))
