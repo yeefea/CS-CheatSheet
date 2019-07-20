@@ -10,14 +10,14 @@ E   D   H   N
 
 请你实现这个将字符串进行指定行数变换的函数：
 
-string convert(string s, int numRows);
+string convert(string s, int n_rows);
 示例 1:
 
-输入: s = "LEETCODEISHIRING", numRows = 3
+输入: s = "LEETCODEISHIRING", n_rows = 3
 输出: "LCIRETOESIIGEDHN"
 示例 2:
 
-输入: s = "LEETCODEISHIRING", numRows = 4
+输入: s = "LEETCODEISHIRING", n_rows = 4
 输出: "LDREOEIIECIHNTSG"
 解释:
 
@@ -26,20 +26,25 @@ E   O E   I I
 E C   I H   N
 T     S     G
 
-解题思路：
+解题思路：index, step两个变量
 """
-class Solution:
-    def convert(self, s: str, numRows: int) -> str:
-        if numRows == 1 or numRows >= len(s):
-            return s
-        res = [''] * numRows
-        idx, step = 0, 1
-    
-        for x in s:
-            res[idx] += x
-            if idx == 0:
-                step = 1
-            elif idx == numRows - 1:
-                step = -1
-            idx += step
-        return ''.join(res)
+
+
+def convert(s: str, n_rows: int) -> str:
+    if n_rows == 1 or n_rows >= len(s):
+        return s
+    res = [''] * n_rows
+    idx, step = 0, 1
+
+    for x in s:
+        res[idx] += x
+        if idx == 0:
+            step = 1
+        elif idx == n_rows - 1:
+            step = -1
+        idx += step
+    return ''.join(res)
+
+
+print(convert('LEETCODEISHIRING', 3))
+print(convert('LEETCODEISHIRING', 4))
