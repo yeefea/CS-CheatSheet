@@ -8,6 +8,12 @@ class BinaryNode:
         self.left_child = None
         self.right_child = None
 
+    def __repr__(self):
+        return str(self.value)
+
+    def __str__(self):
+        return str(self.value)
+
 
 class BinaryTree:
 
@@ -38,6 +44,53 @@ class BinaryTree:
                     n_last = n.right_child
 
 
+def pre_order_traversal(node):
+    """
+    前序遍历
+    :return:
+    """
+    lst = [node]
+    if node.left_child:
+        lst += pre_order_traversal(node.left_child)
+    if node.right_child:
+        lst += pre_order_traversal(node.right_child)
+    return lst
+
+
+def middle_order_traversal(node):
+    lst = []
+    if node.left_child:
+        lst += middle_order_traversal(node.left_child)
+    lst += [node]
+    if node.right_child:
+        lst += middle_order_traversal(node.right_child)
+    return lst
+
+
+def post_order_traversal(node):
+    lst = []
+    if node.left_child:
+        lst += post_order_traversal(node.left_child)
+    if node.right_child:
+        lst += post_order_traversal(node.right_child)
+    lst += [node]
+    return lst
+
+
+def level_order_traversal(node):
+    lst = []
+    q = deque()
+    q.append(node)
+    while len(q) > 0:
+        n = q.popleft()
+        lst.append(n)
+        if n.left_child:
+            q.append(n.left_child)
+        if n.right_child:
+            q.append(n.right_child)
+    return lst
+
+
 if __name__ == '__main__':
     node1 = BinaryNode(1)
     node2 = BinaryNode(2)
@@ -50,5 +103,13 @@ if __name__ == '__main__':
     node2.left_child = node4
     node2.right_child = node5
 
+    print(pre_order_traversal(node1))
+    print(middle_order_traversal(node1))
+    print(post_order_traversal(node1))
+    print(level_order_traversal(node1))
+
     tree = BinaryTree(node1)
     tree.print_tree()
+
+
+
