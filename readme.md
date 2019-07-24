@@ -3,27 +3,43 @@
 ## 算法
 
 ### 排序算法
-* [冒泡排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-* [插入排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-* [希尔排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-* [堆排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-* [归并排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-* [快速排序](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+
+* 冒泡排序 
+  * [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+  
+  * [Python](https://github.com/Blueswing/CS-CheatSheet/blob/master/algorithm/sort.py#L1)
+* 插入排序
+  * [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+  
+  * [Python](https://github.com/Blueswing/CS-CheatSheet/blob/master/algorithm/sort.py#L18)
+* 希尔排序
+  * [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+* 堆排序
+  * [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+* 归并排序
+  * [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+  * [Python](https://github.com/Blueswing/CS-CheatSheet/blob/master/algorithm/sort.py#L38)
+* 快速排序
+  * [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+  * [Python](https://github.com/Blueswing/CS-CheatSheet/blob/master/algorithm/sort.py#L97)
 
 ### 图算法
-* [广度优先搜索]()
-* [深度优先搜索]()
 
-### 五种经典算法：分治法、动态规划、回溯法、分支界限法、贪心算法 
+* [广度优先搜索](https://github.com/Blueswing/CS-CheatSheet/blob/master/data_structure/graph.py#L60)
+* [深度优先搜索](https://github.com/Blueswing/CS-CheatSheet/blob/master/data_structure/graph.py#L100)
+
+### 五种经典算法：分治法、动态规划、回溯法、分支界限法、贪心算法
 
 ### 分治法
 
 ### 动态规划
+
 * [最快流水线问题](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L11)
 * [爬楼梯问题](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L65)
 * [0/1背包问题](https://github.com/Blueswing/AUD_Python/blob/master/algorithm/dynamic_programming.py#L93)
 
 ### 回溯法
+
 * [生成括号](https://github.com/Blueswing/AUD_Python/tree/master/leetcode/22_generate_parenthesis.py)
 
 ### 分支界限法
@@ -33,6 +49,7 @@
 ### [LeetCode](https://github.com/Blueswing/AUD_Python/tree/master/leetcode)
 
 ### 其他算法
+
 * [汉诺塔](https://github.com/Blueswing/AUD/blob/master/src/algorithm/recursion/HanoiTower.java)
 * [最大子数组](https://github.com/Blueswing/AUD/blob/master/src/algorithm/dynamic_programming/MaximumSubArray.java)
 * [2的次方](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
@@ -40,6 +57,7 @@
 * [K路归并](https://github.com/Blueswing/AUD_Python/tree/master/algorithm/k_way_merge.py)
 
 ## 数据结构
+
 * [数组表](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/ArrayList.java)
 * [链表](https://github.com/Blueswing/AUD/blob/master/src/data_structure/list/LinkedList.java)
 * [区块链](https://github.com/Blueswing/AUD_Python/blob/master/data_structure/blockchain.py)
@@ -56,10 +74,10 @@
 * [无向图](https://github.com/Blueswing/AUD/blob/master/src/data_structure/graph/UndirectedGraph.java)
 * [加权有向图](https://github.com/Blueswing/AUD/blob/master/src/data_structure/graph/WeightedGraph.java)
 
-
 ## 设计模式
 
 ### 创建型模式
+
 * [简单工厂 Simple factory](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/simple_factory.py)
 * [工厂方法 Factory method](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/factory_method.py)
 * [抽象工厂 Abstract factory](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/abstract_factory.py)
@@ -68,6 +86,7 @@
 * [原型 Prototype](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/prototype.py)
 
 ### 结构型模式
+
 * [适配器 Adapter](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/adapter.py)
 * [桥接 Bridge](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/bridge.py)
 * [组合 Composite](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/composite.py)
@@ -77,6 +96,7 @@
 * [代理 Proxy](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/proxy.py)
 
 ### 行为型模式
+
 * [责任链 Chain of responsibility](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/chain.py)
 * [命令 Command](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/command.py)
 * [迭代器 Iterator](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/iterator.py)
@@ -90,11 +110,15 @@
 * [访问者 Visitor](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/visitor.py)
 
 ### 其他设计模式
+
 * [拦截过滤器 Intercepting filter](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/filter.py)
 * [空对象 Null](https://github.com/Blueswing/AUD_Python/blob/master/design_pattern/null.py)
 
-
 ## Python
+
+* CPython源码解析
+  
+  * [源码目录结构](https://github.com/Blueswing/CS-CheatSheet/blob/master/python/CPython.md)
 
 ## Go
 
