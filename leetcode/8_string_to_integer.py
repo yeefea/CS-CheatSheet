@@ -45,8 +45,10 @@
 
 解题思路：
 """
-def my_atoi(str):
-    s = str.strip(' ')
+
+
+def my_atoi(s):
+    s = s.strip(' ')
     is_positive = True
     if s.startswith('+'):
         is_positive = True
@@ -58,7 +60,7 @@ def my_atoi(str):
     ascii_0 = ord('0')
     n = 0
     for char in s:
-        if char >= '0' and char <= '9':
+        if '0' <= char <= '9':
             n = n * 10 + (ord(char) - ascii_0)
         else:
             break

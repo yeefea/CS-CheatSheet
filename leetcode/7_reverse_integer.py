@@ -22,6 +22,11 @@
 
 
 def reverse(x: int):
+    """
+    x为32位整数，可以表示-2^31 ~ 2^31-1
+    :param x:
+    :return:
+    """
     y, res = abs(x), 0
     of = (1 << 31) - 1 if x > 0 else 1 << 31
     while y != 0:

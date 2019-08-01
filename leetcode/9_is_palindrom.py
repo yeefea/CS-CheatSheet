@@ -18,11 +18,28 @@
 
 解题思路：暴力解法，int转字符串后反转，判断是否和原来的数相等。
 """
-class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        if x < 0:
-            return False
-        elif x != int(str(x)[::-1]):
-            return False
-        else:
-            return True
+
+
+def is_palindrome_str(x: int) -> bool:
+    if x < 0:
+        return False
+    elif x != int(str(x)[::-1]):
+        return False
+    else:
+        return True
+
+
+def is_palindrome(x: int) -> bool:
+    if x < 0:
+        return False
+    y = 0
+    tmp = x
+    while tmp != 0:
+        remainder = tmp % 10
+        y = y * 10 + remainder
+        tmp = tmp // 10
+    return round(y) == x
+
+
+print(is_palindrome(-1))
+print(is_palindrome(101))
