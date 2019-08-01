@@ -12,14 +12,17 @@
 ]
 解题思路：三指针
 """
+from typing import List
+
+
 class Solution:
     def threeSum(self, num: List[int]) -> List[List[int]]:
         result = []
         num.sort()  # sorting first, avoid duplicate,
         i = 0
-        while i < len(num)-2:
-            j = i+1
-            k = len(num)-1
+        while i < len(num) - 2:
+            j = i + 1
+            k = len(num) - 1
             while j < k:
                 lst = [num[i], num[j], num[k]]
                 if sum(lst) == 0:
@@ -27,9 +30,9 @@ class Solution:
                     k -= 1
                     j += 1
                     # JUMP remove duplicate
-                    while j < k and num[j] == num[j-1]:
+                    while j < k and num[j] == num[j - 1]:
                         j += 1
-                    while j < k and num[k] == num[k+1]:
+                    while j < k and num[k] == num[k + 1]:
                         k -= 1
                 elif sum(lst) > 0:
                     k -= 1
@@ -38,7 +41,7 @@ class Solution:
 
             i += 1
             # remove duplicate
-            while i < len(num)-2 and num[i] == num[i-1]:
+            while i < len(num) - 2 and num[i] == num[i - 1]:
                 i += 1
 
         return result

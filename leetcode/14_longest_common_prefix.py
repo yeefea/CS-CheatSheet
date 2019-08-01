@@ -17,6 +17,7 @@
 所有输入只包含小写字母 a-z 。
 解题思路：指针扫描
 """
+from typing import List
 
 
 class Solution:
@@ -26,7 +27,7 @@ class Solution:
             return pfx
         if len(strs) == 1:
             return strs[0]
-        
+
         for chars in zip(*strs):
             c = chars[0]
             for tmp in chars:
