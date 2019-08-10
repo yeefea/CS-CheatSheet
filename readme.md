@@ -49,12 +49,13 @@
 ### [LeetCode](https://github.com/Blueswing/AUD_Python/tree/master/leetcode)
 
 ### 其他算法
-
+* [二分法查找](https://github.com/Blueswing/AUD_Python/tree/master/algorithm/binary_search.py)
 * [汉诺塔](https://github.com/Blueswing/AUD/blob/master/src/algorithm/recursion/HanoiTower.java)
 * [最大子数组](https://github.com/Blueswing/AUD/blob/master/src/algorithm/dynamic_programming/MaximumSubArray.java)
 * [2的次方](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
 * [二进制数字中1的个数](https://github.com/Blueswing/AUD/blob/master/src/algorithm/Util.java)
 * [K路归并](https://github.com/Blueswing/AUD_Python/tree/master/algorithm/k_way_merge.py)
+* [幻方生成](https://github.com/Blueswing/AUD_Python/tree/master/algorithm/magic_square.py)
 
 ## 数据结构
 
