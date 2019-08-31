@@ -8,16 +8,18 @@
 from typing import List
 
 
-class Solution:
-    def maxArea(self, height: List[int]) -> int:
-        start = 0
-        end = len(height) - 1
-        max_area = 0
-        while start < end:
-            area = min(height[start], height[end]) * (end - start)
-            max_area = max(area, max_area)
-            if height[start] < height[end]:
-                start += 1
-            else:
-                end -= 1
-        return max_area
+def max_area(height: List[int]) -> int:
+    start = 0
+    end = len(height) - 1
+    max_a = 0
+    while start < end:
+        area = min(height[start], height[end]) * (end - start)
+        max_a = max(area, max_a)
+        if height[start] < height[end]:
+            start += 1
+        else:
+            end -= 1
+    return max_a
+
+
+print(max_area([1, 2, 3, 4, 5, 6, 7, 8, 9]))

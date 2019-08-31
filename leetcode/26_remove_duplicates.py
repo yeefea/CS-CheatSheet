@@ -35,16 +35,18 @@ for (int i = 0; i < len; i++) {
 }
 解题思路：双指针
 """
+
+from typing import List
+
+
 class Solution(object):
-    def removeDuplicates(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        idx = 0
-        while idx < len(nums) - 1:
-            if nums[idx] == nums[idx+1]:
-                nums.pop(idx)
-            else:
-                idx += 1
-        return len(nums)
+
+    def removeDuplicates(self, nums: List[int]):
+        if not nums:
+            return 0
+        ptr_l = 0
+        for ptr_r in range(len(nums)):
+            if nums[ptr_l] != nums[ptr_r]:
+                ptr_l += 1
+                nums[ptr_l] = nums[ptr_r]
+        return ptr_l + 1

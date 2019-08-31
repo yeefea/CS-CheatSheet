@@ -5,7 +5,7 @@
 
 输入：1->2->4, 1->3->4
 输出：1->1->2->3->4->4
-解题思路：链表构建，假节点
+解题思路：链表构建
 
 """
 
@@ -20,26 +20,28 @@ class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         if not l1:
             return l2
-        if not l2:
+        elif not l2:
             return l1
-        
-        dummy = ListNode(None)
-        last = dummy
+        if l1.val < l2.val:
+            l_new = l1
+            l1 = l1.next
+        else:
+            l_new = l2
+            l2 = l2.next
+        head = l_new
         while True:
-            if l1 is None and l2 is None:
-                break
-            if l1 is None:
-                last.next = l2
-                l2 = l2.next
-            elif l2 is None:
-                last.next = l1
-                l1 = l1.next
-            elif l1.val < l2.val:
-                last.next = l1
-                l1 = l1.next
+            if l1 and l2:
+                if l1.val < l2.val:
+                    l_new.next = l1
+                    l1 = l1.next
+                else:
+                    l_new.next = l2
+                    l2 = l2.next
+                l_new = l_new.next
             else:
-                last.next = l2
-                l2 = l2.next
-            last = last.next
-        return dummy.next
-            
+                break
+        if l1:
+            l_new.next = l1
+        if l2:
+            l_new.next = l2
+        return head

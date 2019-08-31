@@ -18,15 +18,14 @@
 对于本题而言，当 needle 是空字符串时我们应当返回 0 。这与C语言的 strstr() 以及 Java的 indexOf() 定义相符。
 解题思路：字符串查找，可以直接用python内置的str.find()方法
 """
-class Solution(object):
-    def strStr(self, haystack, needle):
-        if not needle or len(needle) == 0:
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        if not needle:
             return 0
-        for i in range(len(haystack)-len(needle)+1):
-            if haystack[i] == needle[0]:
-                j = 1
-                while j < len(needle) and haystack[i+j] == needle[j]:
-                    j += 1
-                if j == len(needle):
-                    return i
+        if not haystack:
+            return -1
+        l_needle = len(needle)
+        for i in range(len(haystack)):
+            if haystack[i:i+l_needle] == needle:
+                return i
         return -1

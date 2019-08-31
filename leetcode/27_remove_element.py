@@ -38,15 +38,18 @@ int len = removeElement(nums, val);
 for (int i = 0; i < len; i++) {
     print(nums[i]);
 }
-解题思路：链表操作
+解题思路：双指针
 """
-class Solution(object):
-    def removeElement(self, nums, val):
-        idx = 0
-        while idx < len(nums):
-            if nums[idx] == val:
-                nums[idx] = nums[-1]
-                del nums[-1] 
-            else:
-                idx += 1
-        return len(nums)
+from typing import List
+
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        if not nums:
+            return 0
+        ptr_l = 0
+        for ptr_r in range(len(nums)):
+            tmp = nums[ptr_r]
+            if tmp != val:
+                nums[ptr_l] = tmp
+                ptr_l += 1
+        return ptr_l
