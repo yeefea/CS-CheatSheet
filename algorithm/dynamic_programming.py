@@ -113,6 +113,37 @@ def knapsack_problem_01(max_weight, w, v):
     return cache[-1, -1]
 
 
+def recursion_2d(x, y):
+    if x == 0 and y == 0:
+        return 0
+    if x == 0 or y == 0:
+        return 1
+    x, y = abs(x), abs(y)
+    return recursion_2d(x-1, y) + recursion_2d(x, y-1)
+
+
+def dynamic_programming_2d(x, y):
+    """
+    dp[i][0] = 1 for i = 0,...,x
+    dp[0][j] = 1 for j = 0,...,y
+    dp[x][y] = dp[x-1][y] + dp[x][y-1]
+    """
+    if x == 0 and y == 0:
+        return 0
+    if x == 0 or y == 0:
+        return 1
+    x, y = abs(x), abs(y)
+    dp = [[0 for _ in range(y+1)] for _ in range(x+1)]
+    for i in range(x+1):
+        dp[i][0] = 1
+    for i in range(y+1):
+        dp[0][i] = 1
+    for i in range(1, x+1):
+        for j in range(1, y+1):
+            dp[i][j] = dp[i][j-1] + dp[i-1][j]
+    return dp[x][y]
+
+
 if __name__ == '__main__':
     # 测试动态规划解流水线问题
     e = np.array([2, 4])
@@ -132,3 +163,4 @@ if __name__ == '__main__':
     # 测试动态规划解0/1背包问题
     res = knapsack_problem_01(5, np.array([3, 4, 5]), np.array([4, 5, 6]))
     print(res)
+    print(dynamic_programming_2d(3, 5))
