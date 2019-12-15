@@ -131,6 +131,7 @@ class AdjacentMatrixGraph:
 
 def breadth_first_search(g_adj_list: dict, source):
     """
+    O(V+E)
     构造广度优先树，类似于树的层序遍历，要用到queue
     扩展 Prim算法 Dijkstra算法
     :param g_adj_list:
@@ -164,6 +165,16 @@ def breadth_first_search(g_adj_list: dict, source):
                 vertices.append(v)
         color[u] = BLACK
     return vertices, distance, parent
+
+
+def print_path(parent_g, s, v):
+    if v == s:
+        print(s, end=' ')
+    elif v in parent_g:
+        print_path(parent_g, s, parent_g[v])
+        print(v, end=' ')
+    else:
+        print(f'no path from {s} to {v}')
 
 
 def depth_first_search(g_adj_list):
@@ -210,7 +221,7 @@ def topological_sort(g_adj_list):
     pass
 
 
-def test_bfs():
+def demo_bfs():
     adj_list = {
         'A': {'F', 'G'},
         'B': {'S', 'F'},
@@ -226,9 +237,11 @@ def test_bfs():
     print(breadth_first_search(adj_list, 'B'))
     print(breadth_first_search(adj_list, 'C'))
     print(breadth_first_search(adj_list, 'A'))
+    _, _, parent = breadth_first_search(adj_list, 'A')
+    print_path(parent, 'A', 'Z')
 
 
-def test_dfs():
+def demo_dfs():
     adj_list = {'A': {'F', 'G'},
                 'B': {'S', 'F'},
                 'C': {'D', 'E', 'Z'},
@@ -298,9 +311,14 @@ def problem_22_1_3():
     print(t.V, t.E)
 
 
+def problem_22_1_4():
+    # todo
+    pass
+
+
 if __name__ == '__main__':
-    problem_22_1_1()
-    problem_22_1_2()
-    problem_22_1_3()
-    test_bfs()
-    test_dfs()
+    # problem_22_1_1()
+    # problem_22_1_2()
+    # problem_22_1_3()
+    demo_bfs()
+    # demo_dfs()
