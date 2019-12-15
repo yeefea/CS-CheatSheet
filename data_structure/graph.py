@@ -38,91 +38,176 @@ class WeightedEdge(Edge):
         return '{}--({})-->{}'.format(self.v1, self.w, self.v2)
 
 
-class Graph(object):
+class AdjacentListGraph:
 
-    def __init__(self, V=None, E=None, directed=False):
-        self.c = {}
-        self.d = {}
-        self.p = {}
-        self.f = {}
-        self.time = 0
-        if V is None:
-            self.adj_list = {}
-        else:
-            for v in V:
-                self.adj_list[v] = []
-            if E is not None:
-                for v1, v2 in E:
-                    self.adj_list[v1].append(v2)
-                    if not directed:
-                        self.adj_list[v2].append(v1)
-
-    def breadth_first_search(self, s):
+    def __init__(self, adj_list: dict):
         """
-        O(V+E) complexity,  shortest path
-        FIFO queue
+        O(V+E) space
+        :param adj_list:
         """
-        c = {}
-        d = {}
-        p = {}
-        for u in self.adj_list.keys():
-            c[u] = WHITE
-            d[u] = float('inf')
-            p[u] = None
-        c[s] = GRAY
-        d[s] = 0.0
-        p[s] = None
-        q = deque([s])
-        while len(q) > 0:
-            u = q.popleft()
-            # print('{} distance {}'.format(u, d[u]))
-            for v in self.adj_list[u]:
-                if c[v] == WHITE:
-                    c[v] = GRAY
-                    d[v] = d[u] + 1
-                    p[v] = u
-                    q.append(v)
-                    # print(q)
-            c[u] = BLACK
-        self.c = c
-        self.d = d
-        self.p = p
+        self._adj_list = adj_list
 
-    def print_path(self, s, v):
-        if s == v:
-            print(s)
-        elif self.p[v] is None:
-            print('no path from {} to {}'.format(s, v))
-        else:
-            self.print_path(s, self.p[v])
-            print(v)
+    @property
+    def V(self):
+        return list(self._adj_list.keys())
 
-    def depth_first_search(self, s):
-        self.c = {}
-        self.p = {}
-        for u in self.adj_list.keys():
-            self.c[u] = WHITE
-            self.p[u] = None
-            self.f[u] = 0
-        self.time = 0
-        for u in self.adj_list.keys():
-            if self.c[u] == WHITE:
-                self.dfs_visit(u)
+    @property
+    def E(self):
+        adjlist = self._adj_list
+        return list((v, u) for v in adjlist for u in adjlist[v])
 
-    def dfs_visit(self, u):
+    def is_connected(self, u, v):
+        if u in self._adj_list:
+            return v in self._adj_list[u]
+        return False
+
+    def in_degree(self, v):
         """
-        O(V+E) complexity,  shortest path
+        O(E) time
+        :param v:
+        :return:
         """
-        self.c[u] = GRAY
-        self.time += 1
-        self.d[u] = self.time
-        for v in self.adj_list[u]:
-            if self.c[v] == WHITE:
-                self.p[v] = u
-                self.dfs_visit(v)
-        self.c[u] = BLACK
-        self.time += 1
-        self.f[u] = self.time
+        return sum(1 for tmp in self._adj_list.values() for x in tmp if x == v)
+
+    def out_degree(self, v):
+        """
+        O(1) time
+        :param v:
+        :return:
+        """
+        return len(self._adj_list[v])
+
+    @property
+    def T(self):
+        t = {}
+        for key, value in self._adj_list.items():
+            for v in value:
+                if v not in t:
+                    t[v] = {key}
+                else:
+                    t[v].add(key)
+        return AdjacentListGraph(t)
+
+
+class AdjacentMatrixGraph:
+
+    def __init__(self, matrix):
+        """
+        O(V^2) space
+        :param matrix:
+        """
+        self._m = matrix
+
+    @property
+    def V(self):
+        return list(range(len(self._m)))
+
+    @property
+    def E(self):
+        e = []
+        for i, u in enumerate(self._m):
+            for j, v in enumerate(self._m[i]):
+                if v != 0:
+                    e.append((i, j))
+        return e
+
+    @property
+    def T(self):
+        """
+        transposed graph
+        :return:
+        """
+        if not self._m:
+            return AdjacentMatrixGraph([])
+        l = len(self._m)
+        t = [
+            [None for _ in range(l)] for _ in range(l)
+        ]
+        for i, tmp in enumerate(self._m):
+            for j, v in enumerate(self._m[i]):
+                t[j][i] = v
+        return AdjacentMatrixGraph(t)
+
+
+def breadth_first_search(g_adj_list: dict, source):
+    """
+    构造广度优先树，类似于树的层序遍历，要用到queue
+    扩展 Prim算法 Dijkstra算法
+    :param g_adj_list:
+    :param source:
+    :return:
+    """
+    if source not in g_adj_list:
+        raise ValueError(source)
+    color = {}  # WHITE GRAY BLACK
+    distance = {}
+    parent = {}
+    for u in g_adj_list.keys() - {source}:
+        # 所有顶点初始值白色
+        color[u] = WHITE
+        distance[u] = float('inf')
+        parent[u] = None
+
+    color[source] = GRAY  # 第一次访问（发现顶点），变为灰色
+    distance[source] = 0
+    parent[source] = None
+    queue = deque([source])
+    vertices = [source]  # 记录返回值
+    while len(queue) > 0:
+        u = queue.popleft()
+        for v in g_adj_list[u]:
+            if color[v] == WHITE:
+                color[v] = GRAY
+                distance[v] = distance[u] + 1
+                parent[v] = u
+                queue.append(v)
+                vertices.append(v)
+        color[u] = BLACK
+    return vertices, distance, parent
+
+
+def depth_first_search(g_adj_list):
+    def _dfs_visit(_u):
+        nonlocal color
+        nonlocal parent
+        nonlocal time
+        nonlocal discover
+        nonlocal finish
+        nonlocal vertices
+        color[_u] = GRAY
+        vertices.append(_u)
+        time += 1
+        discover[_u] = time
+        for v in g_adj_list[_u]:
+            if color[v] == WHITE:
+                parent[v] = _u
+                _dfs_visit(v)
+        color[_u] = BLACK
+        time += 1
+        finish[_u] = time
+
+    vertices = []
+    color = {}
+    parent = {}
+    discover = {}
+    finish = {}
+    for u in g_adj_list:
+        color[u] = WHITE
+        parent[u] = None
+    time = 0
+    for u in g_adj_list:
+        if color[u] == WHITE:
+            _dfs_visit(u)
+    return vertices
+
+
+def topological_sort(g_adj_list):
+    """
+    dfs
+    :param g_adj_list:
+    :return:
+    """
+    pass
 
 
 def test_bfs():
@@ -137,10 +222,10 @@ def test_bfs():
         'S': {'B', 'D'},
         'Z': {'C'}
     }
-    g = Graph()
-    g.adj_list = adj_list
-    g.breadth_first_search('A')
-    g.print_path('A', 'Z')
+    print(breadth_first_search(adj_list, 'A'))
+    print(breadth_first_search(adj_list, 'B'))
+    print(breadth_first_search(adj_list, 'C'))
+    print(breadth_first_search(adj_list, 'A'))
 
 
 def test_dfs():
@@ -154,12 +239,68 @@ def test_dfs():
                 'S': {'B', 'D'},
                 'Z': {'C'}
                 }
-    g = Graph()
-    g.adj_list = adj_list
-    g.depth_first_search('A')
-    g.print_path('A', 'Z')
+    print(depth_first_search(adj_list))
+
+
+def problem_22_1_1():
+    adj_list = {'A': {'F', 'G'},
+                'B': {'S', 'F'},
+                'C': {'D', 'E', 'Z'},
+                'D': {'C', 'S'},
+                'E': {'F', 'C'},
+                'F': {'E', 'B', 'A'},
+                'G': {'A'},
+                'S': {'B', 'D'},
+                'Z': {'C'}
+                }
+    g = AdjacentListGraph(adj_list)
+    print(g.in_degree('C'))  # O(E)
+    print(g.out_degree('C'))  # O(1)
+
+
+def problem_22_1_2():
+    g = AdjacentMatrixGraph([
+        [0, 1, 1, 0, 0, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 0, 0, 0, 1, 1],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0]
+    ])
+    print(g.V, g.E)
+
+
+def problem_22_1_3():
+    g = AdjacentMatrixGraph([
+        [0, 1, 1, 0, 0, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 0, 0, 0, 1, 1],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0]
+    ])
+    t = g.T
+    print(t.V, t.E)
+    adj_list = {'A': {'F', 'G'},
+                'B': {'S', 'F'},
+                'C': {'D', 'E', 'Z'},
+                'D': {'C', 'S'},
+                'E': {'F', 'C'},
+                'F': {'E', 'B', 'A'},
+                'G': {'A'},
+                'S': {'B', 'D'},
+                'Z': {'C'}
+                }
+    g = AdjacentListGraph(adj_list)
+    t = g.T
+    print(t.V, t.E)
 
 
 if __name__ == '__main__':
+    problem_22_1_1()
+    problem_22_1_2()
+    problem_22_1_3()
     test_bfs()
     test_dfs()
