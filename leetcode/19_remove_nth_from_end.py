@@ -1,5 +1,5 @@
 """
-给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
+给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
 
 示例：
 
@@ -8,20 +8,21 @@
 当删除了倒数第二个节点后，链表变为 1->2->3->5.
 说明：
 
-给定的 n 保证是有效的。
+给定的 n 保证是有效的。
 
 进阶：
 
 你能尝试使用一趟扫描实现吗？
-解题思路：假节点+双指针扫描一趟
 
-dummy->1->2->3->4->5, n=2
-             |     |
-            ptr2  ptr1
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-删除ptr2.next
-ptr2.next = ptr2.next.next
-返回dummy.next
+解题思路：双指针
+
+边界情况 [1] 1 -> []
+        [1,2] 1 -> [1]
+        [1,2] 2 -> [2]
 """
 from data_structure.linked_list import Node
 
@@ -36,30 +37,26 @@ def print_linked_list(head):
 
 class Solution:
 
-    def removeNthFromEnd(self, head, n):
-        """
-        1 2 3 4 5 6 7 8 9, n=1
-                        |
-                        ptr1
-        :param head:
-        :param n:
-        :return:
-        """
-        if n < 1:
-            return head
-        dummy = Node(0)
-        dummy.next = head
-        pointer1 = dummy
-        pointer2 = dummy
+    def removeNthFromEnd(self, head: Node, n: int) -> Node:
+        left = head
+        right = head
         for i in range(n):
-            pointer1 = pointer1.next
-            if pointer1 is None:
-                return head
-        while pointer1.next:
-            pointer1 = pointer1.next
-            pointer2 = pointer2.next
-        pointer2.next = pointer2.next.next
-        return dummy.next
+            right = right.next
+        if not right:  # right已经走到尽头 => n=length of list => remove first node
+            # 考虑边界情况[1] head.next -> None
+            return head.next
+        while right.next:
+            right = right.next
+            left = left.next
+        self._rm_next(left)
+        return head
+
+    def _rm_next(self, node):
+        if not node.next:
+            return
+        nxt_nxt = node.next.next
+        node.next.next = None
+        node.next = nxt_nxt
 
 
 if __name__ == '__main__':
