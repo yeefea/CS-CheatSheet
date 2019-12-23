@@ -15,7 +15,7 @@
 链接：https://leetcode-cn.com/problems/3sum
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-解题思路：先排序O(NlogN)，后两端遍历
+解题思路：先排序O(NlogN)，后两端遍历O(N^2)
 """
 from typing import List
 
@@ -26,23 +26,25 @@ class Solution:
         nums.sort()
         i = 0
         while i < len(nums) - 2:
-            l = i + 1
-            r = len(nums) - 1
-            while l < r:
-                tmp = [nums[i], nums[l], nums[r]]
+            if nums[i] > 0:
+                break
+            left = i + 1  # 左指针
+            right = len(nums) - 1  # 右指针
+            while left < right:
+                tmp = [nums[i], nums[left], nums[right]]
                 _sum = sum(tmp)
                 if _sum == 0:
                     result.append(tmp)
-                    r -= 1
-                    l += 1
-                    while l < r and nums[l] == nums[l - 1]:  # 跳过重复元素
-                        l += 1
-                    while l < r and nums[r] == nums[r + 1]:  # 跳过重复元素
-                        r -= 1
+                    right -= 1
+                    left += 1
+                    while left < right and nums[left] == nums[left - 1]:  # 跳过重复元素
+                        left += 1
+                    while left < right and nums[right] == nums[right + 1]:  # 跳过重复元素
+                        right -= 1
                 elif _sum > 0:
-                    r -= 1
+                    right -= 1
                 else:
-                    l += 1
+                    left += 1
 
             i += 1
             while i < len(nums) - 2 and nums[i - 1] == nums[i]:  # 跳过重复元素
