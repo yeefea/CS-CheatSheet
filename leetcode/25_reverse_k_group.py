@@ -17,21 +17,45 @@ k 是一个正整数，它的值小于或等于链表的长度。如果节点总
 你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
 解题思路：递归和迭代都可以
 """
-class Solution:
-    def reverseKGroup(self, head, k):
 
+
+from leetcode.util import print_linked_list, build_linked_list
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+
+class Solution:
+    def reverseKGroup(self, head, k: int):
         cur = head
         cnt = 0
         while cur and cnt != k:
             cur = cur.next
             cnt += 1
-        if cnt == k:
-            nxt = self.reverseKGroup(cur, k) 
-            while cnt > 0:
-                tmp = head.next
-                head.next = nxt
-                nxt = head
-                head = tmp
-                cnt -= 1
-            return nxt
-        return head
+        if cnt != k:
+            return head
+        nxt = self.reverseKGroup(cur, k)
+        while cnt > 0:
+            new_head = self.move_head(head, nxt)
+            nxt = head
+            head = new_head
+            cnt -= 1
+        return nxt
+
+    def move_head(self, left_head, right_head):
+        """
+        return: new left head
+        """
+        tmp = left_head.next
+        left_head.next = right_head
+        return tmp
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    lst = build_linked_list([1, 2, 3, 4, 5])
+    res = sol.reverseKGroup(lst, 3)
+    print_linked_list(res)
