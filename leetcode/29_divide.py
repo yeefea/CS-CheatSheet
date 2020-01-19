@@ -35,7 +35,7 @@ def positive_divide(dividend, divisor):
         mid = (ll + rr) >> 1
         remain = dividend - mid * divisor
         if remain < 0:
-            rr = mid
+            rr = mid - 1
         elif remain < divisor:
             return mid
         else:
