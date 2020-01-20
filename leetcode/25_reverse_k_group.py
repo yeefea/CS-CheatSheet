@@ -15,11 +15,11 @@ k 是一个正整数，它的值小于或等于链表的长度。如果节点总
 
 你的算法只能使用常数的额外空间。
 你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
-解题思路：递归和迭代都可以
+解题思路：单向链表逆序
 """
 
-
 from leetcode.util import print_linked_list, build_linked_list
+
 
 # Definition for singly-linked list.
 # class ListNode:
@@ -29,33 +29,54 @@ from leetcode.util import print_linked_list, build_linked_list
 
 
 class Solution:
-    def reverseKGroup(self, head, k: int):
-        cur = head
-        cnt = 0
-        while cur and cnt != k:
-            cur = cur.next
-            cnt += 1
-        if cnt != k:
-            return head
-        nxt = self.reverseKGroup(cur, k)
-        while cnt > 0:
-            new_head = self.move_head(head, nxt)
-            nxt = head
-            head = new_head
-            cnt -= 1
-        return nxt
 
-    def move_head(self, left_head, right_head):
+    def reverseKGroup(self, head, k: int):
+        if k == 1 or (not head):
+            return head
+        # 1 -> 2 -> 3 -> 4
+        new_head = self._reverse_one_group(head, k)
+        if new_head == head:
+            return head
+        # 2 -> 1 -> 3 -> 4
+        ptr = head
+        while ptr:
+            # ptr: 3 -> 4 -> nil
+            tmp_head = self._reverse_one_group(ptr.next, k)
+            if tmp_head == ptr.next:
+                ptr.next = tmp_head
+                break
+            else:
+                tmp = ptr.next
+                ptr.next = tmp_head
+                ptr = tmp
+        return new_head
+
+    def _reverse_one_group(self, head, k):
         """
-        return: new left head
+
+        :return: new head
         """
-        tmp = left_head.next
-        left_head.next = right_head
-        return tmp
+        if not head:
+            return head
+        ptr = head
+        for _ in range(k - 1):
+            ptr = ptr.next
+            if not ptr:
+                # 长度不够
+                return head
+        new_head = ptr.next
+        for _ in range(k):
+            ptr = head
+            head = head.next
+            ptr.next = new_head
+            new_head = ptr
+        return new_head
 
 
 if __name__ == "__main__":
     sol = Solution()
-    lst = build_linked_list([1, 2, 3, 4, 5])
-    res = sol.reverseKGroup(lst, 3)
+    res = build_linked_list([1, 2, 3, 4, 5])
+    res = sol.reverseKGroup(res, 2)
+    print_linked_list(res)
+    res = sol.reverseKGroup(res, 3)
     print_linked_list(res)
