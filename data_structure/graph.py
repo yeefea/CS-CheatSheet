@@ -134,9 +134,9 @@ def breadth_first_search(g_adj_list: dict, source):
     O(V+E)
     构造广度优先树，类似于树的层序遍历，要用到queue
     扩展 Prim算法 Dijkstra算法
-    :param g_adj_list:
-    :param source:
-    :return:
+    :param g_adj_list: adjacent list
+    :param source: source vertex
+    :return: vertex list, parent map, parent map
     """
     if source not in g_adj_list:
         raise ValueError(source)
@@ -178,24 +178,29 @@ def print_path(parent_g, s, v):
 
 
 def depth_first_search(g_adj_list):
+    """
+    O(V+E)
+    :param g_adj_list: adjacent list
+    :return: vertex list
+    """
     def _dfs_visit(_u):
         nonlocal color
         nonlocal parent
-        nonlocal time
+        nonlocal times
         nonlocal discover
         nonlocal finish
         nonlocal vertices
         color[_u] = GRAY
         vertices.append(_u)
-        time += 1
-        discover[_u] = time
+        times += 1
+        discover[_u] = times
         for v in g_adj_list[_u]:
             if color[v] == WHITE:
                 parent[v] = _u
                 _dfs_visit(v)
         color[_u] = BLACK
-        time += 1
-        finish[_u] = time
+        times += 1
+        finish[_u] = times
 
     vertices = []
     color = {}
@@ -205,7 +210,7 @@ def depth_first_search(g_adj_list):
     for u in g_adj_list:
         color[u] = WHITE
         parent[u] = None
-    time = 0
+    times = 0
     for u in g_adj_list:
         if color[u] == WHITE:
             _dfs_visit(u)
@@ -237,8 +242,9 @@ def demo_bfs():
     print(breadth_first_search(adj_list, 'B'))
     print(breadth_first_search(adj_list, 'C'))
     print(breadth_first_search(adj_list, 'A'))
-    _, _, parent = breadth_first_search(adj_list, 'A')
-    print_path(parent, 'A', 'Z')
+    v, d, parent = breadth_first_search(adj_list, 'A')
+    print(v, d, parent)
+    # print_path(parent, 'A', 'Z')
 
 
 def demo_dfs():
@@ -320,5 +326,5 @@ if __name__ == '__main__':
     # problem_22_1_1()
     # problem_22_1_2()
     # problem_22_1_3()
-    demo_bfs()
-    # demo_dfs()
+    # demo_bfs()
+    demo_dfs()
