@@ -12,17 +12,21 @@
 ]
 解题思路：回溯法
 """
+from typing import List
+
+
 class Solution:
-    def generateParenthesis(self, n: int) -> list:
+    def generateParenthesis(self, n: int) -> List[str]:
         ans = []
-        def backtrack(S = '', left = 0, right = 0):
-            if len(S) == 2 * n:
-                ans.append(S)
+
+        def backtrack(s, left, right):
+            if len(s) == n * 2:
+                ans.append(s)
                 return
             if left < n:
-                backtrack(S+'(', left+1, right)
+                backtrack(s + '(', left + 1, right)
             if right < left:
-                backtrack(S+')', left, right+1)
+                backtrack(s + ')', left, right + 1)
 
-        backtrack()
+        backtrack('', 0, 0)
         return ans

@@ -35,6 +35,16 @@ def insertion_sort(a: list):
         a[i + 1] = key
 
 
+def insert_sort_reverse(a: list):
+    for j in range(1, len(a)):
+        key = a[j]
+        i = j - 1
+        while i > -1 and a[i] < key:
+            a[i + 1] = a[i]
+            i -= 1
+        a[i + 1] = key
+
+
 def merge_sort(a: list):
     """
     time:
@@ -130,3 +140,11 @@ def quick_sort(a):
         return center
 
     _quick_sort(0, len(a) - 1)
+
+
+if __name__ == '__main__':
+    lst = [1, 5, 2, 4, 3, 4]
+    insertion_sort(lst)
+    print(lst)
+    insert_sort_reverse(lst)
+    print(lst)
