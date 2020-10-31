@@ -21,7 +21,7 @@
 
 * 广度优先搜索 [[Python]](https://github.com/Blueswing/CS-CheatSheet/blob/master/data_structure/graph.py#L60) [[Go]](https://github.com/Blueswing/CS-CheatSheet/blob/master/go_workspace/src/go-algorithm/adt/graph/bfs.go)
 * 深度优先搜索 [[Python]](https://github.com/Blueswing/CS-CheatSheet/blob/master/data_structure/graph.py#L100) [[Go]](https://github.com/Blueswing/CS-CheatSheet/blob/master/go_workspace/src/go-algorithm/adt/graph/dfs.go)
-* 拓扑排序 [[Go]]([[Go]](https://github.com/Blueswing/CS-CheatSheet/blob/master/go_workspace/src/go-algorithm/adt/graph/topsort.go))
+* 拓扑排序 [[Go]](https://github.com/Blueswing/CS-CheatSheet/blob/master/go_workspace/src/go-algorithm/adt/graph/topsort.go)
 
 ## 五种经典算法
 
