@@ -1,7 +1,8 @@
 # 计算机基础知识集锦
 
 ## 快速学习方法
-* 时间管理，制定计划
+
+* 时间管理，计划制定
 * 康奈尔笔记系统
 * 思维导图
 
@@ -9,31 +10,19 @@
 
 ### 排序算法
 
-* 冒泡排序 
-  * [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-  
-  * [Python](https://github.com/Blueswing/CS-CheatSheet/blob/master/algorithm/sort.py#L1)
-* 插入排序
-  * [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-  
-  * [Python](https://github.com/Blueswing/CS-CheatSheet/blob/master/algorithm/sort.py#L18)
-* 希尔排序
-  * [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-* 堆排序
-  * [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-* 归并排序
-  * [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-  * [Python](https://github.com/Blueswing/CS-CheatSheet/blob/master/algorithm/sort.py#L38)
-* 快速排序
-  * [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
-  * [Python](https://github.com/Blueswing/CS-CheatSheet/blob/master/algorithm/sort.py#L97)
+* 冒泡排序 [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java) [Python](https://github.com/Blueswing/CS-CheatSheet/blob/master/algorithm/sort.py#L1)
+* 插入排序 [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java) [Python](https://github.com/Blueswing/CS-CheatSheet/blob/master/algorithm/sort.py#L18)
+* 希尔排序 [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+* 堆排序 [[Java]](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java)
+* 归并排序 [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java) [Python](https://github.com/Blueswing/CS-CheatSheet/blob/master/algorithm/sort.py#L38)
+* 快速排序 [Java](https://github.com/Blueswing/AUD/blob/master/src/algorithm/sorting/SortingAlgorithms.java) [Python](https://github.com/Blueswing/CS-CheatSheet/blob/master/algorithm/sort.py#L97)
 
 ### 图算法
 
 * [广度优先搜索](https://github.com/Blueswing/CS-CheatSheet/blob/master/data_structure/graph.py#L60)
 * [深度优先搜索](https://github.com/Blueswing/CS-CheatSheet/blob/master/data_structure/graph.py#L100)
 
-### 五种经典算法：分治法、动态规划、回溯法、分支界限法、贪心算法
+## 五种经典算法
 
 ### 分治法
 
@@ -51,9 +40,10 @@
 
 ### 贪心算法
 
-### [LeetCode](https://github.com/Blueswing/AUD_Python/tree/master/leetcode)
+## [LeetCode](https://github.com/Blueswing/AUD_Python/tree/master/leetcode)
 
-### 其他算法
+## 其他算法
+
 * [二分法查找](https://github.com/Blueswing/AUD_Python/tree/master/algorithm/binary_search.py)
 * [汉诺塔](https://github.com/Blueswing/AUD/blob/master/src/algorithm/recursion/HanoiTower.java)
 * [最大子数组](https://github.com/Blueswing/AUD/blob/master/src/algorithm/dynamic_programming/MaximumSubArray.java)
