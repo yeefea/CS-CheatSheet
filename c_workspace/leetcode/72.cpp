@@ -88,7 +88,7 @@ public:
 
 int main(int argc, char const *argv[])
 {
-    Solution sol = Solution();
+    Solution sol;
 
     string word1 = "horse", word2 = "ros";
 
